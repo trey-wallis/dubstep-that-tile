@@ -1,0 +1,322 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 136.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/treywa/Websites/dubstep-that-tile/src/org",
+		"/home/treywa/Websites/dubstep-that-tile/src/org/menu",
+		"/home/treywa/Websites/dubstep-that-tile/src/org/tile",
+		"/home/treywa/Websites/dubstep-test"
+	],
+	"file_history":
+	[
+		"/home/treywa/Websites/dubstep-test/package.json",
+		"/home/treywa/Websites/dubstep-test/src/react/menu/About.js",
+		"/home/treywa/Websites/dubstep-test/src/react/menu/GameOver.js",
+		"/home/treywa/Websites/dubstep-test/src/react/menu/Play.js",
+		"/home/treywa/Websites/dubstep-test/src/react/menu/Register.js",
+		"/home/treywa/Websites/dubstep-test/src/react/menu/Score.js",
+		"/home/treywa/Websites/dubstep-test/src/react/menu/Statistics.js",
+		"/home/treywa/Websites/dubstep-test/src/react/UIStore.js",
+		"/home/treywa/Websites/dubstep-test/src/react/ViewLayer.js",
+		"/home/treywa/Websites/dubstep-test/src/react/App.js",
+		"/home/treywa/Websites/dubstep-test/src/react/menu/Title.js",
+		"/home/treywa/Websites/dubstep-test/src/react/menu/Options.js",
+		"/home/treywa/Websites/dubstep-test/src/react/menu/Login.js",
+		"/home/treywa/Websites/dubstep-test/src/react/menu/custom.css",
+		"/home/treywa/Websites/dubstep-test/src/index.css",
+		"/home/treywa/Websites/dubstep-test/src/react/DomainStore.js",
+		"/home/treywa/Websites/dubstep-test/src/react/AppProvider.js",
+		"/home/treywa/Websites/dubstep-test/src/index.js",
+		"/home/treywa/Websites/dubstep-test/src/react/AppContext.js",
+		"/home/treywa/Websites/dubstep-that-tile-react/src/react/ViewLayer.js",
+		"/home/treywa/Websites/dubstep-test/src/App.js",
+		"/home/treywa/Websites/dubstep-test/src/Title.js",
+		"/home/treywa/Websites/dubstep-test/src/UIStore.js",
+		"/home/treywa/Websites/dubstep-test/src/Timer.js",
+		"/home/treywa/Websites/dubstep-test/src/Register.js",
+		"/home/treywa/Websites/dubstep-that-tile-react/src/react/App.js",
+		"/home/treywa/Websites/dubstep-test/src/TodoStore.js",
+		"/home/treywa/Websites/dubstep-test/src/App.css",
+		"/home/treywa/Websites/dubstep-that-tile-react/src/AppProvider.js",
+		"/home/treywa/Websites/dubstep-that-tile-react/package.json",
+		"/home/treywa/Websites/dubstep-that-tile-react/config-overrides.js",
+		"/home/treywa/Websites/dubstep-that-tile-react/src/UIStore.js",
+		"/home/treywa/Websites/dubstep-that-tile-react/src/index.js",
+		"/home/treywa/Websites/dubstep-that-tile-react/src/react/menu/Title.js",
+		"/home/treywa/Websites/dubstep-that-tile-react/src/react/UIStore.js",
+		"/home/treywa/Websites/dubstep-that-tile-react/src/AppContext.js",
+		"/home/treywa/Websites/dubstep-that-tile-react/src/react/menu/Register.js",
+		"/home/treywa/Websites/dubstep-that-tile-react/src/react/menu/Login.js",
+		"/home/treywa/Websites/dubstep-that-tile-react/node_modules/react-scripts/config/webpackDevServer.config.js",
+		"/home/treywa/Websites/dubstep-that-tile-react/README.md",
+		"/home/treywa/Websites/dubstep-that-tile-react/node_modules/react-app-rewire-mobx/index.js",
+		"/home/treywa/Websites/dubstep-that-tile-react/src/App.js",
+		"/home/treywa/Websites/dubstep-that-tile-react/src/ViewLayer.js",
+		"/home/treywa/Websites/dubstep-that-tile-react/src/react/DomainStore.js",
+		"/home/treywa/Websites/dubstep-that-tile-react/src/react/menu/DomainStore.js",
+		"/home/treywa/Websites/dubstep-that-tile/src/org/Level.java",
+		"/home/treywa/Websites/dubstep-that-tile/src/org/tile/Sprite.java",
+		"/home/treywa/Websites/dubstep-that-tile/src/org/Input.java",
+		"/home/treywa/Websites/dubstep-that-tile/src/org/Engine.java",
+		"/home/treywa/Websites/dubstep-that-tile-react/src/Canvas.js",
+		"/home/treywa/Websites/dubstep-that-tile/R.txt",
+		"/home/treywa/Websites/dubstep-that-tile-react/src/App.css",
+		"/home/treywa/Websites/dubstep-that-tile-react/public/manifest.json",
+		"/home/treywa/Websites/dubstep-that-tile-react/public/index.html",
+		"/home/treywa/Websites/dubstep-that-tile-react/.gitignore",
+		"/home/treywa/Websites/dubstep-that-tile-react/LICENSE",
+		"/home/treywa/Websites/my-goals-react/.gitignore",
+		"/home/treywa/Websites/dubstep-that-tile-react/dubstep-that-tile-react/LICENSE",
+		"/home/treywa/Documents/Python/sigmoid_neuron_test.py",
+		"/home/treywa/Documents/Python/linear_model_backprop_manual.py",
+		"/home/treywa/Documents/Python/neural_network_scratch.py",
+		"/home/treywa/Documents/Python/test.py",
+		"/home/treywa/Documents/Python/perceptron-test",
+		"/home/treywa/Documents/Python/sigmoid_neuron_test",
+		"/home/treywa/Public/my-images/src/ImageContainer.js",
+		"/home/treywa/Public/my-images/src/index.js",
+		"/home/treywa/Public/my-images/src/App.js",
+		"/home/treywa/Public/my-images/src/Image.js",
+		"/home/treywa/Public/my-images/src/Image.css",
+		"/home/treywa/Public/my-goals-react/src/components/GraphicVision.js",
+		"/home/treywa/Public/my-goals-react/src/components/GraphicVisionItem.js",
+		"/home/treywa/Public/my-goals-react/src/css/GraphicVisionItem.css",
+		"/home/treywa/Public/my-goals-react/src/css/GraphicVision.css",
+		"/home/treywa/Public/my-goals-react/src/components/GraphicBoard.js",
+		"/home/treywa/Public/my-goals-react/src/components/GraphicHomeCategory.js",
+		"/home/treywa/Public/my-goals-react/src/data/Vision.js",
+		"/home/treywa/Public/my-goals-react/src/data/Goals.js",
+		"/home/treywa/Public/my-goals-react/node_modules/.bin/prettier",
+		"/home/treywa/Public/my-goals-react/src/components/GraphicHomeItem.js",
+		"/home/treywa/Public/my-goals-react/node_modules/autoprefixer/node_modules/postcss/lib/map-generator.js",
+		"/home/treywa/Public/my-goals-react/src/data/Categories.js",
+		"/home/treywa/Public/my-goals-react/src/css/GraphicHomeItem.css",
+		"/home/treywa/Public/my-goals-react/src/css/GraphicHomeCategory.css",
+		"/home/treywa/Public/my-goals-react/src/components/GraphicHome.js",
+		"/home/treywa/Public/my-goals-react/src/css/GraphicHome.css",
+		"/home/treywa/Public/my-goals-react/src/components/InfoBoardModules.js",
+		"/home/treywa/Public/my-goals-react/src/const/Categories.js",
+		"/home/treywa/Public/my-goals-react/src/components/GraphicHomeItem",
+		"/home/treywa/Public/my-goals-react/src/components/graphic/GraphicBoard.js",
+		"/home/treywa/Public/my-goals-react/src/components/App.js",
+		"/home/treywa/Public/my-goals-react/src/components/InfoBoard.js",
+		"/home/treywa/Public/my-goals-react/src/components/GraphicGoal.js",
+		"/home/treywa/Public/my-goals-react/src/components/graphic/GraphicGoal.js",
+		"/home/treywa/Public/my-goals-react/src/css/GraphicGoal.css",
+		"/home/treywa/Public/my-goals-react/src/const/Goals.js",
+		"/home/treywa/Public/my-goals-react/src/css/VisionItemGoal.css",
+		"/home/treywa/Public/my-goals-react/src/css/GraphicBoard.css",
+		"/home/treywa/Public/my-goals-react/src/css/App.css",
+		"/home/treywa/Public/my-goals-react/public/manifest.json",
+		"/home/treywa/Public/my-goals-react/public/index.html",
+		"/home/treywa/Public/my-goals-react/src/components/VisionItemGoal.js",
+		"/home/treywa/Public/my-goals-react/src/components/DeadlineGoal.js",
+		"/home/treywa/Public/my-goals-react/src/css/DeadlineModule.css",
+		"/home/treywa/Public/my-goals-react/src/css/StatsModule.css",
+		"/home/treywa/Public/my-goals-react/src/components/StatsModule.js",
+		"/home/treywa/Public/my-goals-react/src/css/VisionItemModule.css",
+		"/home/treywa/Public/my-goals-react/src/components/VisionItemModule.js",
+		"/home/treywa/Public/my-goals-react/src/css/DeadlineGoal.css",
+		"/home/treywa/Public/my-goals-react/src/components/DeadlineModule.js",
+		"/home/treywa/Public/my-goals-react/src/components/GoalModule.js",
+		"/home/treywa/Public/my-goals-react/src/css/GoalModule.css",
+		"/home/treywa/Public/my-goals-react/src/components/InfoModules.js",
+		"/home/treywa/Public/my-goals-react/src/css/ListGoals.css",
+		"/home/treywa/Public/my-goals-react/src/css/GoalList.css",
+		"/home/treywa/Public/my-goals-react/src/components/ListGoals.css",
+		"/home/treywa/Public/my-goals-react/src/css/Stats.css",
+		"/home/treywa/Public/my-goals-react/src/components/Deadlines.js",
+		"/home/treywa/Public/my-goals-react/src/const/StatsData.js",
+		"/home/treywa/Public/my-goals-react/src/components/Header.js",
+		"/home/treywa/Public/my-goals-react/src/components/InfoModule.js",
+		"/home/treywa/Public/my-goals-react/src/css/InfoBoard.css",
+		"/home/treywa/Public/my-goals-react/src/components/InfoGoal.js",
+		"/home/treywa/Public/my-goals-react/src/components/Stats.js",
+		"/home/treywa/Public/my-goals-react/src/css/Deadlines.css",
+		"/home/treywa/Public/my-goals/css/style.css",
+		"/home/treywa/Public/my-goals-react/src/css/Header.css",
+		"/home/treywa/Public/my-goals-react/src/css/InfoGoal.css",
+		"/home/treywa/Public/my-goals-react/src/index.css"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Register",
+			",\n",
+			"const",
+			"getPoint",
+			".GraphicVision__wrapper",
+			".GraphicVision__outer",
+			"ctx",
+			"DeadlineGoal",
+			"InfoGoal",
+			"Stats",
+			"InfoGoal",
+			"feedforward"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"GameOver",
+			"About",
+			"Score",
+			"Statistics",
+			".GraphicVision__circle-outer",
+			".GraphicVision__wrapper",
+			"context",
+			"VisionItemGoal",
+			"DeadlineGoal",
+			"StatsModule",
+			"Stats"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "App.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 253.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

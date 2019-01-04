@@ -1,11 +1,14 @@
 {
-  "name": "dubstep-that-tile-react",
+  "name": "dubstep-test",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "mobx": "^5.8.0",
+    "mobx-react": "^5.4.3",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "react-scripts": "2.1.2"
+    "react-scripts": "2.1.2",
+    "tachyons": "^4.11.1"
   },
   "scripts": {
     "start": "react-scripts start",

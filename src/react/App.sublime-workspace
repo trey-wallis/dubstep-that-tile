@@ -1,0 +1,308 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 136.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/treywa/Websites/dubstep-that-tile/src/org/tile/Sprite.java",
+		"/home/treywa/Websites/dubstep-that-tile/src/org/Input.java",
+		"/home/treywa/Websites/dubstep-that-tile/src/org/Engine.java",
+		"/home/treywa/Websites/dubstep-that-tile-react/src/Canvas.js",
+		"/home/treywa/Websites/dubstep-that-tile-react/src/App.js",
+		"/home/treywa/Websites/dubstep-that-tile/R.txt",
+		"/home/treywa/Websites/dubstep-that-tile-react/src/App.css",
+		"/home/treywa/Websites/dubstep-that-tile-react/src/index.js",
+		"/home/treywa/Websites/dubstep-that-tile-react/public/manifest.json",
+		"/home/treywa/Websites/dubstep-that-tile-react/public/index.html",
+		"/home/treywa/Websites/dubstep-that-tile-react/.gitignore",
+		"/home/treywa/Websites/dubstep-that-tile-react/LICENSE",
+		"/home/treywa/Websites/my-goals-react/.gitignore",
+		"/home/treywa/Websites/dubstep-that-tile-react/dubstep-that-tile-react/LICENSE",
+		"/home/treywa/Documents/Python/sigmoid_neuron_test.py",
+		"/home/treywa/Documents/Python/linear_model_backprop_manual.py",
+		"/home/treywa/Documents/Python/neural_network_scratch.py",
+		"/home/treywa/Documents/Python/test.py",
+		"/home/treywa/Documents/Python/perceptron-test",
+		"/home/treywa/Documents/Python/sigmoid_neuron_test",
+		"/home/treywa/Public/my-images/src/ImageContainer.js",
+		"/home/treywa/Public/my-images/src/index.js",
+		"/home/treywa/Public/my-images/src/App.js",
+		"/home/treywa/Public/my-images/src/Image.js",
+		"/home/treywa/Public/my-images/src/Image.css",
+		"/home/treywa/Public/my-goals-react/src/components/GraphicVision.js",
+		"/home/treywa/Public/my-goals-react/src/components/GraphicVisionItem.js",
+		"/home/treywa/Public/my-goals-react/src/css/GraphicVisionItem.css",
+		"/home/treywa/Public/my-goals-react/src/css/GraphicVision.css",
+		"/home/treywa/Public/my-goals-react/src/components/GraphicBoard.js",
+		"/home/treywa/Public/my-goals-react/src/components/GraphicHomeCategory.js",
+		"/home/treywa/Public/my-goals-react/src/data/Vision.js",
+		"/home/treywa/Public/my-goals-react/src/data/Goals.js",
+		"/home/treywa/Public/my-goals-react/node_modules/.bin/prettier",
+		"/home/treywa/Public/my-goals-react/src/components/GraphicHomeItem.js",
+		"/home/treywa/Public/my-goals-react/node_modules/autoprefixer/node_modules/postcss/lib/map-generator.js",
+		"/home/treywa/Public/my-goals-react/src/data/Categories.js",
+		"/home/treywa/Public/my-goals-react/src/css/GraphicHomeItem.css",
+		"/home/treywa/Public/my-goals-react/src/css/GraphicHomeCategory.css",
+		"/home/treywa/Public/my-goals-react/src/components/GraphicHome.js",
+		"/home/treywa/Public/my-goals-react/src/css/GraphicHome.css",
+		"/home/treywa/Public/my-goals-react/src/components/InfoBoardModules.js",
+		"/home/treywa/Public/my-goals-react/src/const/Categories.js",
+		"/home/treywa/Public/my-goals-react/src/components/GraphicHomeItem",
+		"/home/treywa/Public/my-goals-react/src/components/graphic/GraphicBoard.js",
+		"/home/treywa/Public/my-goals-react/src/components/App.js",
+		"/home/treywa/Public/my-goals-react/src/components/InfoBoard.js",
+		"/home/treywa/Public/my-goals-react/src/components/GraphicGoal.js",
+		"/home/treywa/Public/my-goals-react/src/components/graphic/GraphicGoal.js",
+		"/home/treywa/Public/my-goals-react/src/css/GraphicGoal.css",
+		"/home/treywa/Public/my-goals-react/src/const/Goals.js",
+		"/home/treywa/Public/my-goals-react/src/css/VisionItemGoal.css",
+		"/home/treywa/Public/my-goals-react/src/css/GraphicBoard.css",
+		"/home/treywa/Public/my-goals-react/src/css/App.css",
+		"/home/treywa/Public/my-goals-react/public/manifest.json",
+		"/home/treywa/Public/my-goals-react/public/index.html",
+		"/home/treywa/Public/my-goals-react/src/components/VisionItemGoal.js",
+		"/home/treywa/Public/my-goals-react/src/components/DeadlineGoal.js",
+		"/home/treywa/Public/my-goals-react/src/css/DeadlineModule.css",
+		"/home/treywa/Public/my-goals-react/src/css/StatsModule.css",
+		"/home/treywa/Public/my-goals-react/src/components/StatsModule.js",
+		"/home/treywa/Public/my-goals-react/src/css/VisionItemModule.css",
+		"/home/treywa/Public/my-goals-react/src/components/VisionItemModule.js",
+		"/home/treywa/Public/my-goals-react/src/css/DeadlineGoal.css",
+		"/home/treywa/Public/my-goals-react/src/components/DeadlineModule.js",
+		"/home/treywa/Public/my-goals-react/src/components/GoalModule.js",
+		"/home/treywa/Public/my-goals-react/src/css/GoalModule.css",
+		"/home/treywa/Public/my-goals-react/src/components/InfoModules.js",
+		"/home/treywa/Public/my-goals-react/src/css/ListGoals.css",
+		"/home/treywa/Public/my-goals-react/src/css/GoalList.css",
+		"/home/treywa/Public/my-goals-react/src/components/ListGoals.css",
+		"/home/treywa/Public/my-goals-react/src/css/Stats.css",
+		"/home/treywa/Public/my-goals-react/src/components/Deadlines.js",
+		"/home/treywa/Public/my-goals-react/src/const/StatsData.js",
+		"/home/treywa/Public/my-goals-react/src/components/Header.js",
+		"/home/treywa/Public/my-goals-react/src/components/InfoModule.js",
+		"/home/treywa/Public/my-goals-react/src/css/InfoBoard.css",
+		"/home/treywa/Public/my-goals-react/src/components/InfoGoal.js",
+		"/home/treywa/Public/my-goals-react/src/components/Stats.js",
+		"/home/treywa/Public/my-goals-react/src/css/Deadlines.css",
+		"/home/treywa/Public/my-goals/css/style.css",
+		"/home/treywa/Public/my-goals-react/src/css/Header.css",
+		"/home/treywa/Public/my-goals-react/src/css/InfoGoal.css",
+		"/home/treywa/Public/my-goals-react/src/index.css",
+		"/home/treywa/Downloads/robots.js",
+		"/home/treywa/Public/my-goals-react/src/const/goals.js",
+		"/home/treywa/Public/my-goals-react/src/components/goals.js",
+		"/home/treywa/Public/my-goals-react/goals.js",
+		"/home/treywa/Public/my-goals-react/.gitignore",
+		"/home/treywa/Public/my-goals-react/src/css/InfoModule.css",
+		"/home/treywa/Public/my-goals/node_modules/react/cjs/react.development.js",
+		"/home/treywa/Public/my-goals/index.html",
+		"/home/treywa/Public/my-goals-react/src/components/InfoDeadlines.js",
+		"/home/treywa/Public/my-goals-react/src/css/InfoDeadlines.css",
+		"/home/treywa/Public/body-building/src/App.js",
+		"/home/treywa/Public/my-goals-react/src/index.js",
+		"/home/treywa/Public/body-building/src/App.test.js",
+		"/home/treywa/Public/body-building/src/index.css",
+		"/home/treywa/Public/body-building/src/App.css",
+		"/home/treywa/Public/my-goals/css/reset.css",
+		"/home/treywa/Public/my-goals-react/src/css/reset.css",
+		"/home/treywa/Public/my-goals-react/src/Header.js",
+		"/home/treywa/Public/body-building/src/index.js",
+		"/home/treywa/Public/my-goals-react/src/css/index.css",
+		"/home/treywa/Public/body-building/public/index.html",
+		"/home/treywa/Public/my-goals-react/src/Header.css",
+		"/home/treywa/Public/my-goals-react/src/App.js",
+		"/home/treywa/Public/my-goals-react/src/App.css",
+		"/home/treywa/Public/my-goals/package.json",
+		"/home/treywa/Public/my-goals/package-lock.json",
+		"/home/treywa/Downloads/autograd_tutorial.py",
+		"/home/treywa/Public/mygoals/README.md",
+		"/home/treywa/Documents/Python/segmenter.py",
+		"/home/treywa/Documents/Python/numpy_array_test.py",
+		"/home/treywa/Downloads/client.ovpn",
+		"/home/treywa/Documents/Python/segemster.py",
+		"/home/treywa/Documents/Python/perceptron-test.py",
+		"/home/treywa/Documents/Python/net2.py",
+		"/home/treywa/Documents/Python/linear_model_backprop_comp.py",
+		"/home/treywa/Documents/Python/torch1.py",
+		"/home/treywa/Documents/Python/linear_model_full_pytorch.py",
+		"/home/treywa/Documents/Python/linear_model_backprop_pytorch.py",
+		"/home/treywa/Documents/Python/linear_model_gradient_two.py",
+		"/home/treywa/Documents/Python/linear_model_gradient.py",
+		"/home/treywa/Documents/Python/linear_model.py",
+		"/home/treywa/Documents/Python/linear_modal_pytorch.py",
+		"/home/treywa/Documents/Python/numpy1.py",
+		"/home/treywa/Documents/Python/torch2.py"
+	],
+	"find":
+	{
+		"height": 24.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"getPoint",
+			".GraphicVision__wrapper",
+			".GraphicVision__outer",
+			"ctx",
+			"DeadlineGoal",
+			"InfoGoal",
+			"Stats",
+			"InfoGoal",
+			"feedforward"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			".GraphicVision__circle-outer",
+			".GraphicVision__wrapper",
+			"context",
+			"VisionItemGoal",
+			"DeadlineGoal",
+			"StatsModule",
+			"Stats"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 37.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "App.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 253.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
