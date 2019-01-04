@@ -5,7 +5,10 @@
 			"path": "/home/treywa/Websites/dubstep-that-tile/src/org"
 		},
 		{
-			"path": "/home/treywa/Websites/dubstep-test"
+			"path": "."
+		},
+		{
+			"path": "/home/treywa/Websites/dubstep-that-tile-react/public"
 		}
 	]
 }
