@@ -33,3 +33,11 @@
 .hover--2:hover {
 	background-color: #311557;
 }
+
+.border--1 {
+	border-radius: 1px;
+}
+
+.border-color--2 {
+	border-color: #1C053A;
+}

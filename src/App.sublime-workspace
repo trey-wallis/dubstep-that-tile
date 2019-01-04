@@ -7,24 +7,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "/home/treywa/Websites/dubstep-that-tile-react/package.json",
-			"settings":
-			{
-				"buffer_size": 727,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/treywa/Websites/dubstep-that-tile-react/.gitignore",
-			"settings":
-			{
-				"buffer_size": 52,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -58,14 +40,49 @@
 	},
 	"expanded_folders":
 	[
-		"/home/treywa/Websites/dubstep-that-tile/src/org",
-		"/home/treywa/Websites/dubstep-that-tile/src/org/menu",
-		"/home/treywa/Websites/dubstep-that-tile/src/org/tile",
 		"/home/treywa/Websites/dubstep-that-tile-react/src",
+		"/home/treywa/Websites/dubstep-that-tile-react/src/react",
+		"/home/treywa/Websites/dubstep-that-tile-react/src/react/menu",
 		"/home/treywa/Websites/dubstep-that-tile-react/public"
 	],
 	"file_history":
 	[
+		"/home/treywa/Websites/dubstep-that-tile-react/src/react/ViewLayer.js",
+		"/home/treywa/Websites/dubstep-that-tile-react/src/react/menu/custom.css",
+		"/home/treywa/Websites/dubstep-that-tile-react/src/react/black-tile.svg",
+		"/home/treywa/Websites/dubstep-that-tile-react/src/react/UIStore.js",
+		"/home/treywa/Websites/dubstep-that-tile-react/src/react/menu/Play.js",
+		"/home/treywa/Websites/dubstep-that-tile-react/src/react/white-tile.svg",
+		"/home/treywa/Websites/dubstep-that-tile-react/src/react/yellow-tile.svg",
+		"/home/treywa/Websites/my-images/src/index.js",
+		"/home/treywa/Websites/my-images/src/index.css",
+		"/home/treywa/Websites/my-images/src/App.js",
+		"/home/treywa/Websites/my-images/src/Image.js",
+		"/home/treywa/Websites/my-images/src/ImageContainer.js",
+		"/home/treywa/Websites/dubstep-that-tile-react/src/react/GameConstants.js",
+		"/home/treywa/Websites/dubstep-that-tile/src/org/Player.java",
+		"/home/treywa/Websites/dubstep-that-tile-react/src/react/menu/PlayConstants.js",
+		"/home/treywa/Websites/dubstep-that-tile-react/src/react/menu/play.css",
+		"/home/treywa/.local/share/Trash/files/body-building/src/index.js",
+		"/home/treywa/Pictures/React App_files/css",
+		"/home/treywa/Pictures/React App_files/1.chunk.js",
+		"/home/treywa/Websites/dubstep-that-tile-react/src/react/canvas.css",
+		"/home/treywa/Websites/dubstep-that-tile-react/src/Constants.js",
+		"/home/treywa/Websites/dubstep-that-tile-react/package.json",
+		"/home/treywa/Websites/dubstep-that-tile-react/public/manifest.json",
+		"/home/treywa/Websites/dubstep-that-tile-react/build/asset-manifest.json",
+		"/home/treywa/Websites/dubstep-that-tile-react/build/manifest.json",
+		"/home/treywa/Websites/dubstep-that-tile-react/.gitignore",
+		"/home/treywa/Websites/dubstep-that-tile-react/src/UIStore.js",
+		"/home/treywa/Websites/dubstep-that-tile-react/src/DomainStore.js",
+		"/home/treywa/Websites/dubstep-that-tile-react/src/AppProvider.js",
+		"/home/treywa/Websites/dubstep-that-tile-react/src/AppContext.js",
+		"/home/treywa/Websites/dubstep-that-tile-react/build/static/js/1.3ebbf3ba.chunk.js.map",
+		"/home/treywa/Websites/dubstep-that-tile-react/build/static/js/main.bd1299f5.chunk.js",
+		"/home/treywa/Websites/dubstep-that-tile-react/build/static/css/main.1093bb6d.chunk.css.map",
+		"/home/treywa/Websites/dubstep-that-tile-react/build/static/css/main.1093bb6d.chunk.css",
+		"/home/treywa/Websites/dubstep-that-tile-react/build/static/css/1.746f453d.chunk.css.map",
+		"/home/treywa/Websites/dubstep-that-tile-react/build/static/css/1.746f453d.chunk.css",
 		"/home/treywa/Websites/dubstep-test/package.json",
 		"/home/treywa/Websites/dubstep-test/src/react/menu/About.js",
 		"/home/treywa/Websites/dubstep-test/src/react/menu/GameOver.js",
@@ -85,7 +102,6 @@
 		"/home/treywa/Websites/dubstep-test/src/react/AppProvider.js",
 		"/home/treywa/Websites/dubstep-test/src/index.js",
 		"/home/treywa/Websites/dubstep-test/src/react/AppContext.js",
-		"/home/treywa/Websites/dubstep-that-tile-react/src/react/ViewLayer.js",
 		"/home/treywa/Websites/dubstep-test/src/App.js",
 		"/home/treywa/Websites/dubstep-test/src/Title.js",
 		"/home/treywa/Websites/dubstep-test/src/UIStore.js",
@@ -94,14 +110,9 @@
 		"/home/treywa/Websites/dubstep-that-tile-react/src/react/App.js",
 		"/home/treywa/Websites/dubstep-test/src/TodoStore.js",
 		"/home/treywa/Websites/dubstep-test/src/App.css",
-		"/home/treywa/Websites/dubstep-that-tile-react/src/AppProvider.js",
-		"/home/treywa/Websites/dubstep-that-tile-react/package.json",
 		"/home/treywa/Websites/dubstep-that-tile-react/config-overrides.js",
-		"/home/treywa/Websites/dubstep-that-tile-react/src/UIStore.js",
 		"/home/treywa/Websites/dubstep-that-tile-react/src/index.js",
 		"/home/treywa/Websites/dubstep-that-tile-react/src/react/menu/Title.js",
-		"/home/treywa/Websites/dubstep-that-tile-react/src/react/UIStore.js",
-		"/home/treywa/Websites/dubstep-that-tile-react/src/AppContext.js",
 		"/home/treywa/Websites/dubstep-that-tile-react/src/react/menu/Register.js",
 		"/home/treywa/Websites/dubstep-that-tile-react/src/react/menu/Login.js",
 		"/home/treywa/Websites/dubstep-that-tile-react/node_modules/react-scripts/config/webpackDevServer.config.js",
@@ -118,9 +129,7 @@
 		"/home/treywa/Websites/dubstep-that-tile-react/src/Canvas.js",
 		"/home/treywa/Websites/dubstep-that-tile/R.txt",
 		"/home/treywa/Websites/dubstep-that-tile-react/src/App.css",
-		"/home/treywa/Websites/dubstep-that-tile-react/public/manifest.json",
 		"/home/treywa/Websites/dubstep-that-tile-react/public/index.html",
-		"/home/treywa/Websites/dubstep-that-tile-react/.gitignore",
 		"/home/treywa/Websites/dubstep-that-tile-react/LICENSE",
 		"/home/treywa/Websites/my-goals-react/.gitignore",
 		"/home/treywa/Websites/dubstep-that-tile-react/dubstep-that-tile-react/LICENSE",
@@ -165,39 +174,11 @@
 		"/home/treywa/Public/my-goals-react/src/css/GraphicBoard.css",
 		"/home/treywa/Public/my-goals-react/src/css/App.css",
 		"/home/treywa/Public/my-goals-react/public/manifest.json",
-		"/home/treywa/Public/my-goals-react/public/index.html",
-		"/home/treywa/Public/my-goals-react/src/components/VisionItemGoal.js",
-		"/home/treywa/Public/my-goals-react/src/components/DeadlineGoal.js",
-		"/home/treywa/Public/my-goals-react/src/css/DeadlineModule.css",
-		"/home/treywa/Public/my-goals-react/src/css/StatsModule.css",
-		"/home/treywa/Public/my-goals-react/src/components/StatsModule.js",
-		"/home/treywa/Public/my-goals-react/src/css/VisionItemModule.css",
-		"/home/treywa/Public/my-goals-react/src/components/VisionItemModule.js",
-		"/home/treywa/Public/my-goals-react/src/css/DeadlineGoal.css",
-		"/home/treywa/Public/my-goals-react/src/components/DeadlineModule.js",
-		"/home/treywa/Public/my-goals-react/src/components/GoalModule.js",
-		"/home/treywa/Public/my-goals-react/src/css/GoalModule.css",
-		"/home/treywa/Public/my-goals-react/src/components/InfoModules.js",
-		"/home/treywa/Public/my-goals-react/src/css/ListGoals.css",
-		"/home/treywa/Public/my-goals-react/src/css/GoalList.css",
-		"/home/treywa/Public/my-goals-react/src/components/ListGoals.css",
-		"/home/treywa/Public/my-goals-react/src/css/Stats.css",
-		"/home/treywa/Public/my-goals-react/src/components/Deadlines.js",
-		"/home/treywa/Public/my-goals-react/src/const/StatsData.js",
-		"/home/treywa/Public/my-goals-react/src/components/Header.js",
-		"/home/treywa/Public/my-goals-react/src/components/InfoModule.js",
-		"/home/treywa/Public/my-goals-react/src/css/InfoBoard.css",
-		"/home/treywa/Public/my-goals-react/src/components/InfoGoal.js",
-		"/home/treywa/Public/my-goals-react/src/components/Stats.js",
-		"/home/treywa/Public/my-goals-react/src/css/Deadlines.css",
-		"/home/treywa/Public/my-goals/css/style.css",
-		"/home/treywa/Public/my-goals-react/src/css/Header.css",
-		"/home/treywa/Public/my-goals-react/src/css/InfoGoal.css",
-		"/home/treywa/Public/my-goals-react/src/index.css"
+		"/home/treywa/Public/my-goals-react/public/index.html"
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 39.0
 	},
 	"find_in_files":
 	{
@@ -211,6 +192,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"tileoffset",
 			"Register",
 			",\n",
 			"const",
@@ -251,67 +233,8 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "/home/treywa/Websites/dubstep-that-tile-react/package.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 727,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								562,
-								562
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/home/treywa/Websites/dubstep-that-tile-react/.gitignore",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 52,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								52,
-								52
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Git Formats/Git Ignore.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],

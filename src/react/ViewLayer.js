@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { AppContext } from './AppContext';
 import { Observer } from "mobx-react";
+
 import Title from './menu/Title';
 import Register from './menu/Register';
 import Login from './menu/Login';
@@ -15,7 +16,7 @@ class ViewLayer extends Component {
 
   render() {
     return (
-      <div className="Canvas w-50 h-75">
+      <div className="Canvas w-25 h-75">
           <AppContext.Consumer>
 	        {
 	        	(context) => (
