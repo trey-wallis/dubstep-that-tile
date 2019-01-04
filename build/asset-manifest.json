@@ -12,7 +12,7 @@
   "static/media/yellow-tile.svg": "dubstep-that-tile-react/static/media/yellow-tile.03ed92f1.svg",
   "static/media/black-tile.svg": "dubstep-that-tile-react/static/media/black-tile.0bf5de19.svg",
   "static/css/1.84003ee8.chunk.css.map": "dubstep-that-tile-react/static/css/1.84003ee8.chunk.css.map",
-  "index.html": "/dubstep-that-tile-react/index.html",
+  "index.html": "dubstep-that-tile-react/index.html",
   "precache-manifest.6c9735d76913ed6c801b091647f8dedb.js": "dubstep-that-tile-react/precache-manifest.6c9735d76913ed6c801b091647f8dedb.js",
   "service-worker.js": "dubstep-that-tile-react/service-worker.js"
 }
