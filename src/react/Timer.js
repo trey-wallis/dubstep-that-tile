@@ -7,6 +7,7 @@ class Timer {
 		this.startTime = 0;
 		this.currentTime = 0;
 		this.isRunning = false;
+		this.lastTime = 0;
 	}
 
 	start(){
@@ -27,6 +28,7 @@ class Timer {
 	}
 
 	reset(){
+		this.lastTime = this.elapsed;
 		this.startTime = 0;
 		this.currentTime = 0;
 	}
@@ -35,8 +37,12 @@ class Timer {
 		return this.currentTime - this.startTime;
 	}
 
-	get display(){
+	get displayElapsed(){
 		return (this.elapsed / 1000).toFixed(NUM_DECIMAL_TIME);
+	}
+
+	get displayLastTime(){
+		return (this.lastTime / 1000).toFixed(NUM_DECIMAL_TIME);
 	}
 }
 
@@ -45,5 +51,5 @@ export default Timer;
 decorate(Timer, {
 	currentTime: observable,
 	startTime: observable,
-	display: computed,
+	displayElapsed: computed,
 })

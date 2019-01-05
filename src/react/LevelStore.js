@@ -10,7 +10,8 @@ import { WHITE_TILE,
 		 KEY_A,
 		 KEY_S,
 		 KEY_D,
-		 KEY_F }
+		 KEY_F,
+		 NUM_DECIMAL_TILE_SEC }
 		from './GameConstants';
 
 class LevelStore {
@@ -21,6 +22,7 @@ class LevelStore {
 		this.tileOffset = 0; //how many tiles we need to scroll
 		this.initializeTiles();
 		this.gameStarted = false;
+		this.wonGame = false;
 		this.timer = new Timer();
 	}
 
@@ -127,12 +129,21 @@ class LevelStore {
 	}
 
 	get time(){
-		return `${this.timer.display}s`;
+		return `${this.timer.displayElapsed}s`;
+	}
+
+	get lastTime(){
+		return this.timer.displayLastTime;
+	}
+
+	get tilesPerSecond(){
+		return (this.lastTime / 50).toFixed(NUM_DECIMAL_TILE_SEC);
 	}
 
 	win(){
 		this.resetGame();
 		ui.setRoute("gameover");
+		this.wonGame = true;
 	}
 
 	lose(){
@@ -145,6 +156,7 @@ class LevelStore {
 		this.timer.reset();
 		this.tileOffset = 0;
 		this.gameStarted = false;
+		this.wonGame = false;
 	}
 }
 
