@@ -8,6 +8,6 @@ To get started please do clone the file using `git clone {url}` and then cd into
 For development please download git and github pages `npm install gh-pages`
 
 NPM Packages used
-react
-gh-pages
-tachyons
+<br/>react
+<br/>gh-pages
+<br/>tachyons
