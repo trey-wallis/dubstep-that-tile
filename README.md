@@ -7,7 +7,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 To get started please do clone the file using `git clone {url}` and then cd into that folder and do `npm install`
 For development please download git and github pages `npm install gh-pages`
 
-<b>NPM Packages used</b>
+NPM Packages used
 react
 gh-pages
 tachyons
