@@ -12,11 +12,13 @@ import Options from './menu/Options';
 import Score from './menu/Score';
 import Statistics from './menu/Statistics'
 
+import './ViewLayer.css';
+
 class ViewLayer extends Component {
 
   render() {
     return (
-      <div className="Canvas w-25 h-75">
+      <div className="ViewLayer">
           <AppContext.Consumer>
 	        {
 	        	(context) => (
@@ -28,7 +30,7 @@ class ViewLayer extends Component {
                     case "login":
                       return <Login ui={context.ui} />
                     case "scores":
-                     return <Score ui={context.ui} />
+                     return <Score ui={context.ui} level={context.level} />
                     case "statistics":
                       return <Statistics ui={context.ui} />
                     case "options":
@@ -36,9 +38,9 @@ class ViewLayer extends Component {
                     case "about":
                       return <About ui={context.ui} />
                     case "gameover":
-                      return <GameOver ui={context.ui} />
+                      return <GameOver ui={context.ui} level={context.level} />
                     case "play":
-                      return <Play ui={context.ui} />
+                      return <Play ui={context.ui} level={context.level} />
                     default:
                       return <Title ui={context.ui}/>
                     }

@@ -1,3 +1,15 @@
+.Play {
+	position: relative;
+}
+
 .Tile {
 	width: 25%;
+	height: 25%;
+}
+
+.Play__timer {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	width: 100%;
 }

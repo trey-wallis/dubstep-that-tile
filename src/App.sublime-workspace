@@ -41,12 +41,13 @@
 	"expanded_folders":
 	[
 		"/home/treywa/Websites/dubstep-that-tile-react/src",
-		"/home/treywa/Websites/dubstep-that-tile-react/src/react",
-		"/home/treywa/Websites/dubstep-that-tile-react/src/react/menu",
-		"/home/treywa/Websites/dubstep-that-tile-react/public"
+		"/home/treywa/Websites/dubstep-that-tile-react/build"
 	],
 	"file_history":
 	[
+		"/home/treywa/Websites/dubstep-that-tile-react/package.json",
+		"/home/treywa/Websites/dubstep-that-tile-react/build/asset-manifest.json",
+		"/home/treywa/Websites/dubstep-that-tile-react/build/index.html",
 		"/home/treywa/Websites/dubstep-that-tile-react/src/react/ViewLayer.js",
 		"/home/treywa/Websites/dubstep-that-tile-react/src/react/menu/custom.css",
 		"/home/treywa/Websites/dubstep-that-tile-react/src/react/black-tile.svg",
@@ -68,9 +69,7 @@
 		"/home/treywa/Pictures/React App_files/1.chunk.js",
 		"/home/treywa/Websites/dubstep-that-tile-react/src/react/canvas.css",
 		"/home/treywa/Websites/dubstep-that-tile-react/src/Constants.js",
-		"/home/treywa/Websites/dubstep-that-tile-react/package.json",
 		"/home/treywa/Websites/dubstep-that-tile-react/public/manifest.json",
-		"/home/treywa/Websites/dubstep-that-tile-react/build/asset-manifest.json",
 		"/home/treywa/Websites/dubstep-that-tile-react/build/manifest.json",
 		"/home/treywa/Websites/dubstep-that-tile-react/.gitignore",
 		"/home/treywa/Websites/dubstep-that-tile-react/src/UIStore.js",
@@ -173,8 +172,7 @@
 		"/home/treywa/Public/my-goals-react/src/css/VisionItemGoal.css",
 		"/home/treywa/Public/my-goals-react/src/css/GraphicBoard.css",
 		"/home/treywa/Public/my-goals-react/src/css/App.css",
-		"/home/treywa/Public/my-goals-react/public/manifest.json",
-		"/home/treywa/Public/my-goals-react/public/index.html"
+		"/home/treywa/Public/my-goals-react/public/manifest.json"
 	],
 	"find":
 	{

@@ -2,7 +2,18 @@ import React from 'react';
 import { autorun, observable, decorate, computed } from "mobx";
 
 class DomainStore {
-	data = []
+	score_data = [
+		{
+
+		},
+		{
+
+		},
+		{
+
+		}
+
+	];
 }
 
 decorate(DomainStore, {

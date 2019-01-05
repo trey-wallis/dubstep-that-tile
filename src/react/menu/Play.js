@@ -10,11 +10,18 @@ class Play extends Component {
     }
 
 	render(){
-		const {ui, domain} = this.props;
+		const {ui, domain, level} = this.props;
 		
 		return(
-		<div className="Play flex flex-wrap" onKeyPress={(e) => {ui.handleKeyPress(e.charCode)}} tabIndex="0" ref={(node) => this.input = node}>
-			{ui.filterTiles}
+		<div className="Play" onKeyPress={(e) => {level.handleKeyPress(e.charCode)}} tabIndex="0" ref={(node) => this.input = node}>
+			<div className="Play__background flex flex-wrap">
+				{level.filterTiles}
+			</div>
+			<div className="Play__timer">
+				<div className="Play__timer-text tr mt2 f3 dark-red">
+				 { level.time }
+				</div>
+			</div>
 		</div>);
 	}
 }

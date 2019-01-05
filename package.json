@@ -2,7 +2,7 @@
   "name": "dubstep-test",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://trey-wallis.github.io/dubstep-that-tile-react/",
+  "homepage": "https://trey-wallis.github.io/dubstep-that-tile-react",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "mobx": "^5.8.0",
