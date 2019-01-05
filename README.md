@@ -11,3 +11,4 @@ For development please download git and github pages `npm install gh-pages`
 react<br/>
 gh-pages<br/>
 tachyons<br/>
+mobx</br>
