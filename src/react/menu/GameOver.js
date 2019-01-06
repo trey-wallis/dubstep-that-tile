@@ -21,6 +21,7 @@ class GameOver extends Component {
 					<div className="GameOver__third tc f3-ns f4 b">{level.tilesPerSecond} tiles per second</div>
 				  </div>)
 			}
+			{ ui.retryButton }
 			{ ui.backButton }
 		</div>
 		);
