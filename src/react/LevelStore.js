@@ -24,6 +24,7 @@ class LevelStore {
 		this.gameStarted = false;
 		this.wonGame = false;
 		this.timer = new Timer();
+		this.traversed = 0;
 	}
 
 	getRandomNum(min, max){
@@ -49,6 +50,7 @@ class LevelStore {
 				//Place a yellow row at the start and end
 				if (y === 0 || (y === NUM_TILES_Y - 5)){
 					tile = YELLOW_TILE.id;
+				//Place a black tile in the random location
 				} else if (!black && iter === num && y < NUM_TILES_Y - 5){
 					tile = BLACK_TILE.id;
 					black = true;
@@ -137,16 +139,18 @@ class LevelStore {
 	}
 
 	get tilesPerSecond(){
-		return ((NUM_TILES_Y - 4) / this.lastTime).toFixed(NUM_DECIMAL_TILE_SEC);
+		return (this.traversed / this.lastTime).toFixed(NUM_DECIMAL_TILE_SEC);
 	}
 
 	win(){
+		this.traversed = this.tileOffset;
 		this.resetGame();
 		ui.setRoute("gameover");
 		this.wonGame = true;
 	}
 
 	lose(){
+		this.traversed = this.tileOffset;
 		this.resetGame();
 		ui.setRoute("gameover");
 	}
