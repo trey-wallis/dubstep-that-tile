@@ -137,7 +137,7 @@ class LevelStore {
 	}
 
 	get tilesPerSecond(){
-		return (this.lastTime / 50).toFixed(NUM_DECIMAL_TILE_SEC);
+		return ((NUM_TILES_Y - 4) / this.lastTime).toFixed(NUM_DECIMAL_TILE_SEC);
 	}
 
 	win(){
