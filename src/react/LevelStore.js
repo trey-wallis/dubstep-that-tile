@@ -7,6 +7,7 @@ import { WHITE_TILE,
 		 YELLOW_TILE,
 		 NUM_TILES_X,
 		 NUM_TILES_Y,
+		 NUM_TILES,
 		 KEY_A,
 		 KEY_S,
 		 KEY_D,
@@ -31,6 +32,7 @@ class LevelStore {
 	}
 
 	initializeTiles(){
+		//Initialize the tile array
 		for (let y = 0; y < NUM_TILES_Y; y++){
 			//Get a random number between 0 and 1
 			//If we have already placed a black tile
@@ -56,6 +58,7 @@ class LevelStore {
 				this.tiles[x + y * NUM_TILES_X] = tile;
 			}
 		}
+		//Intialize the filteredTiles array - which is just 12 tiles
 	}
 
 	get filterTiles(){
@@ -73,11 +76,11 @@ class LevelStore {
 		return reversed.map((tile, id) => {
 			switch(tile){
 				case WHITE_TILE.id:
-					return <img key={id} className="Tile" src={WHITE_TILE.svg} alt="white" />;
+					return <img key={id} id={"white-" + id} className="Tile" src={WHITE_TILE.svg} onClick={(e) => {this.handleClick(e)}} alt="white" />;
 				case BLACK_TILE.id:
-					return <img key={id} className="Tile" src={BLACK_TILE.svg} alt="black" />;
+					return <img key={id} id={"black-" + id} className="Tile" src={BLACK_TILE.svg} onClick={(e) => {this.handleClick(e)}} alt="black" />;
 				default: //Yellow tile
-					return <img key={id} className="Tile" src={YELLOW_TILE.svg} alt="yellow" />;
+					return <img key={id} id={"yellow-" + id} className="Tile" src={YELLOW_TILE.svg} onClick={(e) => {this.handleClick(e)}} alt="yellow" />;
 			}
 		});
 	}
@@ -88,7 +91,7 @@ class LevelStore {
 				this.timer.start();
 				this.gameStarted = true;
 			}
-			if (!this.checkLose(code)){
+			if (!this.checkLoseKey(code)){
 				this.tileOffset++;
 				if (this.tileOffset === 50){
 					this.win();
@@ -99,7 +102,29 @@ class LevelStore {
 		}
 	}
 
-	checkLose(code){
+	handleClick(e){
+		if (!this.gameStarted){
+			this.timer.start();
+			this.gameStarted = true;
+		}
+		if (!this.checkLoseMouse(e.target.id)){
+			this.tileOffset++;
+			if (this.tileOffset === 50){
+				this.win();
+			}
+		} else {
+			this.lose();
+		}
+	}
+
+	checkLoseMouse(id){
+		if (id === "white-12" || id === "white-13" || id === "white-14" || id === "white-15"){
+			return true;
+		}
+		return false;
+	}
+
+	checkLoseKey(code){
 		switch(code){
 			//We have to remember that all these key codes are in reverse order
 			//because the filtered array is reversed

@@ -13,7 +13,7 @@ class Play extends Component {
 		const {ui, domain, level} = this.props;
 		
 		return(
-		<div className="Play" onKeyPress={(e) => {level.handleKeyPress(e.charCode)}} tabIndex="0" ref={(node) => this.input = node}>
+		<div className="Play" onKeyPress={(e) => {level.handleKeyPress(e.charCode)}}tabIndex="0" ref={(node) => this.input = node}>
 			<div className="Play__background flex flex-wrap">
 				{level.filterTiles}
 			</div>

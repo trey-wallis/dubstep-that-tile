@@ -22,6 +22,7 @@ export const YELLOW_TILE = {
 
 export const NUM_TILES_X = 4;
 export const NUM_TILES_Y = 54;
+export const NUM_TILES = NUM_TILES_X * NUM_TILES_Y;
 export const KEY_A = 97;
 export const KEY_S = 115;
 export const KEY_D = 100;

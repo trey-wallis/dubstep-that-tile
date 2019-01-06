@@ -4,7 +4,7 @@ import { autorun, observable, decorate, computed } from "mobx";
 class UIStore {
 
 	constructor(){
-		this.route = "gameover";
+		this.route = "title";
 	}
 
 	setRoute(route){
