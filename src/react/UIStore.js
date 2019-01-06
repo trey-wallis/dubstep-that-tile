@@ -29,6 +29,13 @@ class UIStore {
 				<button className="mt5 bg-color--empty outline--none bw0 dim f4-ns f5" onClick={ () => {ui.setRoute("title")} } >Back</button>
 			</div>);
 	}
+
+	get retryButton(){
+		return(
+			<div className="RetryButton flex justify-center">
+				<button className="mt5 bg-color--empty outline--none bw0 dim f4-ns f5" onClick={ () => {ui.setRoute("play")} } >Retry</button>
+			</div>);
+	}
 }
 
 decorate(UIStore, {
