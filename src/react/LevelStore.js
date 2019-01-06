@@ -186,6 +186,7 @@ class LevelStore {
 		this.tileOffset = 0;
 		this.gameStarted = false;
 		this.wonGame = false;
+		this.initializeTiles();
 	}
 }
 
