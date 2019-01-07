@@ -1,7 +1,6 @@
 import React from 'react';
 import { autorun, observable, decorate, computed } from "mobx";
 import ui from './UIStore';
-import Options from './menu/Options';
 import Timer from './Timer';
 import { WHITE_TILE,
 		 BLACK_TILE,
