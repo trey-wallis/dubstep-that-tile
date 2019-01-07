@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import level from '../LevelStore';
 
 class Options extends Component {
 
 	render(){
-		const {ui, domain, level} = this.props;
+		const {ui, domain} = this.props;
 		
 		return(
 		<div className="Options h-100 relative flex justify-center">
