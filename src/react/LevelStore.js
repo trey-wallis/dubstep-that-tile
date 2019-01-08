@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
 import { autorun, observable, decorate, computed } from "mobx";
 import ui from './UIStore';
 import Timer from './Timer';
@@ -19,7 +20,7 @@ class LevelStore {
 
 	constructor(){
 		this.multiplier = 1;
-		this.numTilesY = NUM_TILES_Y * this.multiplier + 4;
+		this.numTilesY = parseInt(NUM_TILES_Y * this.multiplier) + 4;
 		this.tiles = [];
 		this.filteredTiles = [];
 		this.tileOffset = 0; //how many tiles we need to scroll
@@ -171,6 +172,24 @@ class LevelStore {
 		return (this.traversed / this.lastTime).toFixed(NUM_DECIMAL_TILE_SEC);
 	}
 
+	get modeSelect() {
+		let options = ["<option value=\"0.2\">10</option>",
+						"<option value=\"1\">50</option>",
+						"<option value=\"2\">100</option>",
+						"<option value=\"4\">200</option>",
+						"<option value=\"20\">1000</option>",
+						"<option value=\"100\">Infinite (5000)</option>"];
+		let optionsOut = [];
+		for (let i = 0; i < options.length; i++) {
+			if (options[i].includes("value=\"" + level.multiplier + "\"")) {
+				console.log(options[i]);
+				options[i] = options[i].replace("value", "selected value");
+			}
+			optionsOut.push(ReactHtmlParser(options[i]));
+		}
+		return optionsOut;
+	}
+
 	win(){
 		this.traversed = this.tileOffset;
 		this.resetGame();
@@ -185,7 +204,7 @@ class LevelStore {
 	}
 
 	resetGame(){
-		this.numTilesY = NUM_TILES_Y * this.multiplier + 4;
+		this.numTilesY = parseInt(NUM_TILES_Y * this.multiplier) + 4;
 		this.timer.stop();
 		this.timer.reset();
 		this.tileOffset = 0;
