@@ -15,7 +15,7 @@ class Play extends Component {
 		return(
 		<div className="Play" onKeyPress={(e) => {level.handleKeyPress(e.charCode)}}tabIndex="0" ref={(node) => this.input = node}>
 			<div className="Play__background flex flex-wrap">
-				{level.filterTiles}
+				{ level.gameTiles }
 			</div>
 			<div className="Play__timer">
 				<div className="Play__timer-text tr mt2 f3 dark-red">

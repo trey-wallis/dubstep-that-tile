@@ -4,10 +4,7 @@ import {AppContext} from './AppContext';
 /*
 * Import stores
 */
-import ui from './UIStore';
-import domain from './DomainStore';
-import level from './LevelStore';
-
+import rootStore from './store/RootStore';
 /*
 * This works as a work around for not being able to use the built in provider with Mobx with @inject
 * (because create-react-app 2 doesn't support decorators)
@@ -16,9 +13,9 @@ import level from './LevelStore';
 */
 class AppProvider extends Component {
   state = {
-    ui: ui,
-    domain: domain,
-    level: level
+    ui: rootStore.ui,
+    domain: rootStore.domain,
+    level: rootStore.level
   }
   
 	render() {

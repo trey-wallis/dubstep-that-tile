@@ -13,7 +13,7 @@ import './index.css';
 * Component imports
 */
 import App from './react/App';
-import AppProvider from './react/AppProvider'
+import AppProvider from './react/AppProvider';
 
 /*
 * Custom NPM package images

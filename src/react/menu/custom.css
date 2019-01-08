@@ -1,3 +1,7 @@
+/*
+* Custom Background Colors
+*/
+
 .bg-color--1 {
 	background-color: #1C053A;
 }
@@ -18,7 +22,7 @@
 	background-color: #8F78AD;	
 }
 
-.bg-color--empty {
+.bg-color--none {
 	background-color: rgba(0,0,0,0);
 }
 
@@ -26,22 +30,54 @@
 	background-color: rgba(255,255,255,0.1);
 }
 
-.color-1a {
+.bg-color--inherit {
+	background-color: inherit;
+}
+
+
+/*
+* Text Colors
+*/
+
+.color--1 {
+	color: #1C053A;
+}
+
+.color--2 {
+	color: #311557;
+}
+
+.color--3 {
+	color: #4B2D73;
+}
+
+.color--4 {
+	color: #6B4E90;
+}
+
+.color--5 {
+	color: #8F78AD;	
+}
+
+.color--1a {
 	color: #1a1a1a;
 }
 
-.color-b {
+.color--b {
 	color: #bbbbbb;
 }
+
+/*
+* Custom Outline Colors
+*/
 
 .outline--none {
 	outline: none;
 }
 
-.bg-color--inherit {
-	background-color: inherit;
-}
-
+/*
+* Other
+*/
 .hover--2:hover {
 	background-color: #311557;
 }
