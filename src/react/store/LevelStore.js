@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
 import { observable, decorate, computed } from "mobx";
 import Timer from '../game/Timer';
 import Level from '../game/Level';
@@ -20,6 +21,7 @@ class LevelStore {
 		this.timer = new Timer();
 		this.level = new Level(this);
 		this.traversed = 0;
+		this.selectedTiles = 0;
 	}
 
 	handleKeyPress(code){
@@ -125,6 +127,29 @@ class LevelStore {
 		this.level.reset();
 		this.gameStarted = false;
 		this.wonGame = false;
+	}
+
+	setLevel(numTiles){
+		this.selectedTiles = numTiles;
+		this.level = new Level(this, numTiles);
+	}
+
+	get modeSelect() {
+		let options = ["<option value=\"10\">10</option>",
+						"<option value=\"50\">50</option>",
+						"<option value=\"100\">100</option>",
+						"<option value=\"200\">200</option>",
+						"<option value=\"1000\">1000</option>",
+						"<option value=\"5000\">Infinite (5000)</option>"];
+		let optionsOut = [];
+		for (let i = 0; i < options.length; i++) {
+			if (options[i].includes("value=\"" + this.selectedTiles + "\"")) {
+				console.log(options[i]);
+				options[i] = options[i].replace("value", "selected value");
+			}
+			optionsOut.push(ReactHtmlParser(options[i]));
+		}
+		return optionsOut;
 	}
 }
 
