@@ -1,5 +1,3 @@
-import React from 'react';
-
 import white from './white-tile.svg';
 import black from './black-tile.svg';
 import yellow from './yellow-tile.svg';

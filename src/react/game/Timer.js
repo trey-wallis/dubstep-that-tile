@@ -1,4 +1,4 @@
-import { NUM_DECIMAL_TIME } from './GameConstants'
+import { NUM_DECIMAL_TIME } from '../GameConstants'
 import { observable, decorate, computed } from "mobx";
 
 class Timer {

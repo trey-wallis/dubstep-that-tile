@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Options extends Component {
 
 	render(){
-		const {ui, domain} = this.props;
+		const {ui, domain, level} = this.props;
 		
 		return(
 		<div className="Options h-100 relative flex justify-center">
@@ -12,9 +12,9 @@ class Options extends Component {
 					<select id="mode" name="Mode" onChange={ () => {
 							var value = document.getElementById("mode").value;
 							value != "inf"?
-								window.level.setMultiplier(parseInt(value))
-								:window.level.setMultiplier(Infinity);
-							window.level.resetGame();
+								level.setMultiplier(parseInt(value))
+								:level.setMultiplier(Infinity);
+							level.resetGame();
 						} }>
 						<option value="1">50</option>
 						<option value="2">100</option>
