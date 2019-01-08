@@ -17,3 +17,35 @@
 button {
 	color: #bbbbbb;
 }
+
+select {
+	margin-left: 2% !important;
+	height: 30px;
+	background-color: rgba(255,255,255,0.1);
+	color: #000000;
+	border: none;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	text-align: center;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.description {
+	font-size: 14px;
+	color: #1a1a1a;
+}
+
+li {
+	text-align: center;
+	width: 100%;
+}
+
+#options-list {
+	font-size: 18pt;
+	margin-top: 50%;
+	list-style-type: none;
+}

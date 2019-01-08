@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/dubstep-that-tile-react/precache-manifest.da13480bc921273c3fb8b0384b92632d.js"
+  "/dubstep-that-tile-react/precache-manifest.d9125a901e631c7d25d65fd90d633df4.js"
 );
 
 workbox.clientsClaim();

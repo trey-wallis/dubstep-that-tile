@@ -18,6 +18,8 @@ import { WHITE_TILE,
 class LevelStore {
 
 	constructor(){
+		this.multiplier = 1;
+		this.numTilesY = NUM_TILES_Y * this.multiplier + 4;
 		this.tiles = [];
 		this.filteredTiles = [];
 		this.tileOffset = 0; //how many tiles we need to scroll
@@ -34,7 +36,7 @@ class LevelStore {
 
 	initializeTiles(){
 		//Initialize the tile array
-		for (let y = 0; y < NUM_TILES_Y; y++){
+		for (let y = 0; y < this.numTilesY; y++){
 			//Get a random number between 0 and 1
 			//If we have already placed a black tile
 			const num  = this.getRandomNum(1,4);
@@ -50,10 +52,10 @@ class LevelStore {
 				//Default tile to place
 				let tile = WHITE_TILE.id;
 				//Place a yellow row at the start and end
-				if (y === 0 || (y === NUM_TILES_Y - 5)){
+				if (y === 0 || (y === this.numTilesY - 5)){
 					tile = YELLOW_TILE.id;
 				//Place a black tile in the random location
-				} else if (!black && iter === num && y < NUM_TILES_Y - 5){
+				} else if (!black && iter === num && y < this.numTilesY - 5){
 					tile = BLACK_TILE.id;
 					black = true;
 				}
@@ -95,7 +97,7 @@ class LevelStore {
 			}
 			if (!this.checkLoseKey(code)){
 				this.tileOffset++;
-				if (this.tileOffset === 50){
+				if (this.tileOffset === this.numTilesY - 4){
 					this.win();
 				}
 			} else {
@@ -111,7 +113,7 @@ class LevelStore {
 		}
 		if (!this.checkLoseMouse(e.target.id)){
 			this.tileOffset++;
-			if (this.tileOffset === 50){
+			if (this.tileOffset === this.numTilesY - 4){
 				this.win();
 			}
 		} else {
@@ -120,7 +122,9 @@ class LevelStore {
 	}
 
 	checkLoseMouse(id){
-		if (id === "white-12" || id === "white-13" || id === "white-14" || id === "white-15"){
+		if (id.startsWith("white")) {
+			return true;
+		} else if (!(id.endsWith("12") || id.endsWith("13") || id.endsWith("14") || id.endsWith("15"))) {
 			return true;
 		}
 		return false;
@@ -181,12 +185,17 @@ class LevelStore {
 	}
 
 	resetGame(){
+		this.numTilesY = NUM_TILES_Y * this.multiplier + 4;
 		this.timer.stop();
 		this.timer.reset();
 		this.tileOffset = 0;
 		this.gameStarted = false;
 		this.wonGame = false;
 		this.initializeTiles();
+	}
+
+	setMultiplier(multiplier) {
+		this.multiplier = multiplier;
 	}
 }
 
