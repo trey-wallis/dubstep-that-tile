@@ -3,6 +3,10 @@
 	{
 		"selected_items":
 		[
+			[
+				"games",
+				"totalPlayedGames"
+			]
 		]
 	},
 	"buffers":
@@ -40,13 +44,24 @@
 	},
 	"expanded_folders":
 	[
+		"/home/treywa/Websites/dubstep-that-tile-react/src",
+		"/home/treywa/Websites/dubstep-that-tile-react/src/react",
 		"/home/treywa/Websites/dubstep-that-tile-react/public"
 	],
 	"file_history":
 	[
-		"/home/treywa/Websites/dubstep-that-tile-react/src/react/store/UIStore.js",
-		"/home/treywa/Websites/dubstep-that-tile-react/src/react/game/Level.js",
+		"/home/treywa/Websites/dubstep-that-tile-react/src/react/menu/Score.js",
+		"/home/treywa/Websites/dubstep-that-tile-react/src/react/menu/Statistics.js",
+		"/home/treywa/Websites/dubstep-that-tile-react/src/react/menu/Options.js",
 		"/home/treywa/Websites/dubstep-that-tile-react/src/react/store/LevelStore.js",
+		"/home/treywa/Websites/dubstep-that-tile-react/src/react/game/Statistics.js",
+		"/home/treywa/Websites/dubstep-that-tile-react/src/react/game/Level.js",
+		"/home/treywa/Websites/my-goals-react/src/components/GraphicHome.js",
+		"/home/treywa/Websites/my-goals-react/src/index.js",
+		"/home/treywa/Websites/dubstep-that-tile-react/src/react/menu/custom.css",
+		"/home/treywa/Websites/dubstep-that-tile-react/src/react/ViewLayer.js",
+		"/home/treywa/Websites/dubstep-that-tile-react/src/react/menu/About.js",
+		"/home/treywa/Websites/dubstep-that-tile-react/src/react/store/UIStore.js",
 		"/home/treywa/Websites/dubstep-that-tile-react/src/react/store/RootStore.js",
 		"/home/treywa/Websites/dubstep-that-tile-react/src/react/menu/Play.js",
 		"/home/treywa/Websites/dubstep-that-tile/src/org/Level.java",
@@ -54,14 +69,11 @@
 		"/home/treywa/Websites/dubstep-that-tile-react/src/react/store/DomainStore.js",
 		"/home/treywa/Websites/dubstep-that-tile-react/src/index.js",
 		"/home/treywa/Websites/dubstep-that-tile-react/src/react/GameConstants.js",
-		"/home/treywa/Websites/dubstep-that-tile-react/src/react/ViewLayer.js",
-		"/home/treywa/Websites/dubstep-that-tile-react/src/react/menu/Options.js",
 		"/home/treywa/Websites/dubstep-that-tile-react/src/react/AppProvider.js",
 		"/home/treywa/Websites/dubstep-that-tile-react/src/react/game/Timer.js",
 		"/home/treywa/Websites/dubstep-that-tile-react/src/react/menu/GameOver.js",
 		"/home/treywa/Websites/dubstep-that-tile-react/src/react/menu/play.css",
 		"/home/treywa/Websites/dubstep-that-tile-react/package.json",
-		"/home/treywa/Websites/dubstep-that-tile-react/src/react/menu/custom.css",
 		"/home/treywa/Websites/dubstep-that-tile-react/build/index.html",
 		"/home/treywa/Websites/dubstep-that-tile-react/src/react/LevelStore.js",
 		"/home/treywa/Websites/dubstep-that-tile-react/public/index.html",
@@ -69,11 +81,9 @@
 		"/home/treywa/Websites/dubstep-that-tile-react/public/site.webmanifest",
 		"/home/treywa/Websites/dubstep-that-tile-react/src/react/UIStore.js",
 		"/home/treywa/Websites/dubstep-that-tile-react/src/react/Timer.js",
-		"/home/treywa/Websites/dubstep-that-tile-react/src/react/menu/About.js",
 		"/home/treywa/Websites/dubstep-that-tile-react/src/react/menu/Title.js",
 		"/home/treywa/Websites/dubstep-that-tile-react/src/react/ViewLayer.css",
 		"/home/treywa/Websites/dubstep-that-tile-react/src/LevelStore.js",
-		"/home/treywa/Websites/dubstep-that-tile-react/src/react/menu/Score.js",
 		"/home/treywa/Websites/dubstep-that-tile-react/src/react/DomainStore.js",
 		"/home/treywa/Websites/dubstep-that-tile-react/build/asset-manifest.json",
 		"/home/treywa/Websites/dubstep-that-tile-react/src/react/black-tile.svg",
@@ -167,15 +177,11 @@
 		"/home/treywa/Public/my-goals-react/src/components/GraphicHomeCategory.js",
 		"/home/treywa/Public/my-goals-react/src/data/Vision.js",
 		"/home/treywa/Public/my-goals-react/src/data/Goals.js",
-		"/home/treywa/Public/my-goals-react/node_modules/.bin/prettier",
-		"/home/treywa/Public/my-goals-react/src/components/GraphicHomeItem.js",
-		"/home/treywa/Public/my-goals-react/node_modules/autoprefixer/node_modules/postcss/lib/map-generator.js",
-		"/home/treywa/Public/my-goals-react/src/data/Categories.js",
-		"/home/treywa/Public/my-goals-react/src/css/GraphicHomeItem.css"
+		"/home/treywa/Public/my-goals-react/node_modules/.bin/prettier"
 	],
 	"find":
 	{
-		"height": 39.0
+		"height": 24.0
 	},
 	"find_in_files":
 	{

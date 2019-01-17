@@ -18,7 +18,9 @@ class About extends Component {
 				<div className="About__scoring-body tc f5-ns f6">Your score is determined by how fast you can traverse the tiles</div>
 			</div>
 			<div className="Copyright pa3">
-				<div className="Copyright__name tc b mb1 f4-ns f5">Made by Trey Wallis</div>
+				<div className="Copyright__name tc b mb1 f4-ns f5">Made by Trey Wallis
+					<div className="f6 mt2">Contributions by James Reis</div>
+				</div>
 				<div className="Version tc f5-ns f6">1.0.0</div>
 			</div>
 			{ ui.backButton }
