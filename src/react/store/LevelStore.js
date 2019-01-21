@@ -23,7 +23,7 @@ class LevelStore {
 		this.level = new Level(this);
 		this.statistics = new Statistics();
 		this.traversed = 0;
-		this.selectedTiles = 0;
+		this.selectedTiles = 50;
 	}
 
 	handleKeyPress(code){
@@ -44,11 +44,11 @@ class LevelStore {
 	}
 
 	handleClick(e){
-		if (!this.gameStarted){
-			this.timer.start();
-			this.gameStarted = true;
-		}
 		if (this.validClick(e.target.id)){
+			if (!this.gameStarted){
+				this.timer.start();
+				this.gameStarted = true;
+			}
 			if (!this.checkLoseMouse(e.target.id)){
 				this.level.increaseTileOffset();
 				if (this.level.tileOffset === this.level.gameSize - 4){
