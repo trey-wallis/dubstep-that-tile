@@ -1,5 +1,5 @@
 ## Overview
-Dubstep That Tile is a remake of the popular phone app Don't Step the White Tile. Being a remake, the app includes different game modes and a competitive score base
+Dubstep That Tile is a remake of the popular phone app Don't Tap the White Tile. Being a remake, the app includes different game modes and a competitive score base
 
 ### Project Guide
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
