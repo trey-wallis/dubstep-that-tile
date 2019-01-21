@@ -8,7 +8,7 @@ To get started please do clone the file using `git clone {url}` and then cd into
 To install server dependencies please execute `npm install -g nodemon` and `npm install -g express`
 For development please download git and github pages `npm install gh-pages`
 
-<b>Npm Packages</b></br>
+<b>NPM Packages Client</b></br>
 react<br/>
 gh-pages<br/>
 tachyons<br/>
