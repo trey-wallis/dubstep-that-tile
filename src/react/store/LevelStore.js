@@ -1,8 +1,9 @@
 import React from 'react';
-import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
+import ReactHtmlParser from 'react-html-parser';
 import { observable, decorate, computed } from "mobx";
 import Timer from '../game/Timer';
 import Level from '../game/Level';
+import Statistics from '../game/Statistics';
 import { WHITE_TILE, 
 		 KEY_A,
 		 KEY_S,
@@ -20,8 +21,9 @@ class LevelStore {
 		this.wonGame = false;
 		this.timer = new Timer();
 		this.level = new Level(this);
+		this.statistics = new Statistics();
 		this.traversed = 0;
-		this.selectedTiles = 0;
+		this.selectedTiles = 50;
 	}
 
 	handleKeyPress(code){
@@ -42,22 +44,34 @@ class LevelStore {
 	}
 
 	handleClick(e){
-		if (!this.gameStarted){
-			this.timer.start();
-			this.gameStarted = true;
-		}
-		if (!this.checkLoseMouse(e.target.id)){
-			this.level.increaseTileOffset();
-			if (this.level.tileOffset === this.level.gameSize - 4){
-				this.win();
+		if (this.validClick(e.target.id)){
+			if (!this.gameStarted){
+				this.timer.start();
+				this.gameStarted = true;
 			}
-		} else {
-			this.lose();
+			if (!this.checkLoseMouse(e.target.id)){
+				this.level.increaseTileOffset();
+				if (this.level.tileOffset === this.level.gameSize - 4){
+					this.win();
+				}
+			} else {
+				this.lose();
+			}
 		}
 	}
 
 	checkLoseMouse(id){
 		if (id.startsWith("white")) {
+			return true;
+		}
+		return false;
+	}
+
+	/*
+	* Make sure we only accept input for the bottom 4 tiles on the screen
+	*/
+	validClick(id){
+		if(id.includes("12") || id.includes("13") || id.includes("14") || id.includes("15")){
 			return true;
 		}
 		return false;
@@ -108,20 +122,51 @@ class LevelStore {
 		return (this.traversed / this.lastTime).toFixed(NUM_DECIMAL_TILE_SEC);
 	}
 
+	get totalWhiteTiles(){
+		return this.statistics.white;
+	}
+
+	get totalBlackTiles(){
+		return this.statistics.black;
+	}
+
+	get totalTiles(){
+		return (this.statistics.black + this.statistics.white);
+	}
+
+	get totalCompletedGames(){
+		return this.statistics.completed;
+	}
+
+	get totalPlayedGames(){
+		return this.statistics.games;
+	}
+
+	get averageTilesPerSecond(){
+		return this.statistics.averageTiles;
+	}
+
 	win(){
 		this.traversed = this.level.tileOffset;
+		this.statistics.playedGame();
+		this.statistics.completedGame();
+		this.statistics.increaseBlackTiles(this.traversed);
 		this.reset();
-		this.root.ui.setRoute("gameover");
 		this.wonGame = true;
+		this.root.ui.setRoute("gameover");
 	}
 
 	lose(){
 		this.traversed = this.level.tileOffset;
+		this.statistics.playedGame();
+		this.statistics.increaseWhiteTile();
+		this.statistics.increaseBlackTiles(this.traversed);
 		this.reset();
 		this.root.ui.setRoute("gameover");
 	}
 
 	reset(){
+		this.statistics.saveStatsToStorage();
 		this.timer.stop();
 		this.timer.reset();
 		this.level.reset();

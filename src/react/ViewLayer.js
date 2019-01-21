@@ -32,7 +32,7 @@ class ViewLayer extends Component {
                     case "scores":
                      return <Score ui={context.ui} level={context.level} />
                     case "statistics":
-                      return <Statistics ui={context.ui} />
+                      return <Statistics ui={context.ui} level={context.level} />
                     case "options":
                       return <Options ui={context.ui} level={context.level} />
                     case "about":
