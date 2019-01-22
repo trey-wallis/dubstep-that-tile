@@ -4,13 +4,12 @@ Dubstep That Tile is a remake of the popular phone app Don't Tap the White Tile.
 ### Project Guide
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-To get started please do clone the file using `git clone {url}`
-The github project contains both an API and react (client) folder
-Please install the local dependencies for both applications by doing `cd API` and `npm install` and then `cd react` and `npm install`
-To install global server dependencies please execute `npm install -g nodemon` and `npm install -g express`
-
-For interfacing with github please download git
-Please git pull before pushing any changes to the origin
+To get started please do clone the file using `git clone {url}`</br>
+The github project contains both an API and react (client) folder </br>
+Please install the local dependencies for both applications by doing `cd API` and `npm install` and then `cd react` and `npm install` </br>
+To install global server dependencies please execute `npm install -g nodemon` and `npm install -g express`</br>
+</br>
+For interfacing with github please download git. Please git pull before pushing any changes to the origin
 
 <b>NPM Packages Client</b></br>
 react<br/>
