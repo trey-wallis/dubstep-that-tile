@@ -1,0 +1,41 @@
+.Play {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.Play__background {
+	width: 100%;
+	height: 100%;
+}
+
+.Play__tile {
+	width: 25%;
+	height: 25%;
+}
+
+
+.Play__tile--black {
+	background-image: url("../black-tile.svg");
+	background-repeat: none;
+	background-size: 100% 100%;
+}
+
+.Play__timer {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	width: 100%;
+}
+
+.Play__tile--yellow {
+	background-image: url("../yellow-tile.svg");
+	background-repeat: none;
+	background-size: 100% 100%;
+}
+
+.Play__tile--white {
+	background-image: url("../white-tile.svg");
+	background-repeat: none;
+	background-size: 100% 100%;
+}
