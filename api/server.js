@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+const bcrypt = require("bcrypt-nodejs");
 
 const PORT = 3006;
 const app = express();
@@ -12,13 +13,42 @@ const database = {
 	users:[
 		{
 			id: '0',
-			username: 'trey',
-			password: 'test',
+			username: 'bob',
+			hash: '$2a$10$vLD8J0SsmvqMbL8eCZ.XiOey1fhlDsxt7zjlbdA2qDUlooCRpOJLO',
 			joined: new Date()
 		}
 	]
 };
 
+/*
+* Bcrypt methods
+*/
+const registerUser = (response, username, password) => {
+	bcrypt.genSalt(10, function(err, salt) {
+		bcrypt.hash(password, salt, null, (err, res) => {
+			database.users.push({
+				username: username,
+				hash: res,
+				joined: new Date()
+			});
+			console.log("Registered", username);
+			console.log("Hash", res);
+			response.status(200).json("Successfully registered");
+		});
+	});
+};
+
+const checkLogin = (res, username, password, hash) => {
+	bcrypt.compare(password, hash, (err, match) => {
+	    if(match){
+	    	const user = database.users.find(user=> user.username === username);
+	    	res.status(200).json({id: user.id, joined: user.joined});
+	    	console.log(username, "has successfully logged in")
+	    } else {
+	    	res.status(400).json("Invalid username or password");
+	    }
+	});
+}
 
 /*
 * Middlewares for express
@@ -34,7 +64,7 @@ app.use((req, res, next) => {
 * Get requests
 */
 app.get('/', (req, res) => {
-	res.send("Success!");
+	res.send(database.users);
 });
 
 
@@ -44,45 +74,35 @@ app.get('/', (req, res) => {
 app.post('/register', (req, res) => {
 	const {username, password, passwordRepeat} = req.body;
 	
-	let response = {
-		status: 200,
-		message: "Registered successfully"
-	}
 	if (username === '' || password === '' || passwordRepeat === ''){
-		response = {
-			status: 400,
-			message: "Please fill out all fields"
-		}
+		res.status(400).json("Please fill out all fields");
+	} else if (password.length < 8){
+		res.status(400).json("Your password must have at least 8 characters")
 	} else if (password !== passwordRepeat){
-		response = {
-			status: 400,
-			message: "Passwords do not match"
-		}
+		res.status(400).json("Passwords don't match");
 	} else if (database.users.find(user => user.username === username)){
-		response = {
-			status: 400,
-			message: "User already exists"
-		}
+		console.log("User already exists");
+		res.status(400).json("Username already exists");
 	} else {
-		database.users.push({
-			id: '1',
-			username: username,
-			password: password,
-			joined: new Date()
-		});
+		const usernameToLowercase = username.toLowerCase();
+		registerUser(res, usernameToLowercase, password);
 	}
-	res.status(response.status).json(response.message);
-
 });
 
 app.post('/signin', (req, res) => {
 	const {username, password} = req.body;
-	if (username === database.users[0].username &&
-		password === database.users[0].password){
-		res.json("Login successful");
+	const usernameLowercase = username.toLowerCase();
+	const user = database.users.find(user => user.username == usernameLowercase);
+	if (user){
+		const hash = user.hash;
+		checkLogin(res, usernameLowercase, password, hash);
 	} else {
 		res.status(400).json("Invalid username or password");
 	}
+});
+
+app.post('/logout', (req, res) => {
+	console.log("Logging out");
 });
 
 /*
