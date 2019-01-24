@@ -73,18 +73,17 @@ app.get('/', (req, res) => {
 */
 app.post('/register', (req, res) => {
 	const {username, password, passwordRepeat} = req.body;
-	
+	const usernameToLowercase = username.toLowerCase();
 	if (username === '' || password === '' || passwordRepeat === ''){
 		res.status(400).json("Please fill out all fields");
 	} else if (password.length < 8){
 		res.status(400).json("Your password must have at least 8 characters")
 	} else if (password !== passwordRepeat){
 		res.status(400).json("Passwords don't match");
-	} else if (database.users.find(user => user.username === username)){
+	} else if (database.users.find(user => user.username === username.toLowerCase())){
 		console.log("User already exists");
 		res.status(400).json("Username already exists");
 	} else {
-		const usernameToLowercase = username.toLowerCase();
 		registerUser(res, usernameToLowercase, password);
 	}
 });
