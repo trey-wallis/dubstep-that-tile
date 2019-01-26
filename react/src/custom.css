@@ -111,3 +111,19 @@
 input:focus {
     outline: none;
 }
+
+table {
+	border-collapse: collapse;
+}
+
+.w33 {
+	width: 33%;
+}
+
+.mh400px {
+	max-height: 400px;
+}
+
+.y-auto {
+	overflow-y: auto;
+}

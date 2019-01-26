@@ -1,7 +1,9 @@
 import { decorate, observable } from "mobx";
+import React from 'react';
 import Timer from '../game/Timer';
 import Level from '../game/Level';
 import Statistics from '../game/Statistics';
+import Scores from '../game/Scores';
 import { WHITE_TILE, 
 		 KEY_A,
 		 KEY_S,
@@ -20,6 +22,7 @@ class LevelStore {
 		this.timer = new Timer();
 		this.level = new Level(this);
 		this.statistics = new Statistics();
+		this.scores = new Scores();
 		this.traversed = 0;
 		this.selectedTiles = 50;
 	}
@@ -149,6 +152,7 @@ class LevelStore {
 		this.statistics.playedGame();
 		this.statistics.completedGame();
 		this.statistics.increaseBlackTiles(this.traversed);
+		this.scores.playedGame(this.traversed, (this.traversed / this.timer.displayElapsed).toFixed(NUM_DECIMAL_TILE_SEC), this.timer.displayElapsed);
 		this.reset();
 		this.wonGame = true;
 		this.root.ui.setRoute("gameover");
@@ -159,12 +163,14 @@ class LevelStore {
 		this.statistics.playedGame();
 		this.statistics.increaseWhiteTile();
 		this.statistics.increaseBlackTiles(this.traversed);
+		this.scores.playedGame(this.traversed, (this.traversed / this.timer.displayElapsed).toFixed(NUM_DECIMAL_TILE_SEC), "Lost");
 		this.reset();
 		this.root.ui.setRoute("gameover");
 	}
 
 	reset(){
 		this.statistics.saveStatsToStorage();
+		this.scores.saveScoresToStorage();
 		this.timer.stop();
 		this.timer.reset();
 		this.level.reset();
@@ -179,6 +185,23 @@ class LevelStore {
 
 	get mode(){
 		return this.selectedTiles;
+	}
+
+	get displayScores(){
+		let scoreArray = [];
+		for (let i = 0; i < this.scores.tiles.length; i++) {
+			let className = "f4 tc";
+			if (i % 2 === 1) {
+				className = "f4 tc bg-color--4";
+			}
+			const score = (<tr class={className}>
+								<td class="w33">{this.scores.tiles[i]}</td>
+								<td class="w33">{this.scores.tps[i]}</td>
+								<td class="w33">{this.scores.time[i]}</td>
+						</tr>);
+			scoreArray.push(score);
+		}
+		return scoreArray;
 	}
 }
 
