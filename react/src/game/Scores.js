@@ -6,7 +6,7 @@ class Scores {
 	constructor(){
 		this.tiles = [];
 		this.tps = [];
-		this.win = [];
+		this.time = [];
 		try{
 			this.loadScoresFromStorage();
 		} catch(e){
@@ -14,10 +14,10 @@ class Scores {
 		}
 	}
 
-	playedGame(tiles, tps, win){
+	playedGame(tiles, tps, time){
 		this.tiles.unshift(tiles);
 		this.tps.unshift(tps);
-		this.win.unshift(win);
+		this.time.unshift(time);
 	}
 
 	/*
@@ -34,7 +34,7 @@ class Scores {
 				const scores = JSON.parse(storage.scores); //Get a javascript object
 				this.tiles = scores.tiles;
 				this.tps = scores.tps;
-				this.win = scores.win;
+				this.time = scores.time;
 			}
 		} else {
 			throw Error("No HTML5 web storage found on browser");
@@ -52,7 +52,7 @@ class Scores {
 			const scores = {
 				tiles: this.tiles,
 				tps: this.tps,
-				win: this.win
+				time: this.time
 			}
 			storage.scores = JSON.stringify(scores);
 		} else {

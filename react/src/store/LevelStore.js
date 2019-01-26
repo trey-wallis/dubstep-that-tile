@@ -1,5 +1,5 @@
 import { decorate, observable } from "mobx";
-import ReactHtmlParser from 'react-html-parser';
+import React from 'react';
 import Timer from '../game/Timer';
 import Level from '../game/Level';
 import Statistics from '../game/Statistics';
@@ -152,7 +152,7 @@ class LevelStore {
 		this.statistics.playedGame();
 		this.statistics.completedGame();
 		this.statistics.increaseBlackTiles(this.traversed);
-		this.scores.playedGame(this.traversed, (this.traversed / this.timer.displayElapsed).toFixed(NUM_DECIMAL_TILE_SEC), "Won");
+		this.scores.playedGame(this.traversed, (this.traversed / this.timer.displayElapsed).toFixed(NUM_DECIMAL_TILE_SEC), this.timer.displayElapsed);
 		this.reset();
 		this.wonGame = true;
 		this.root.ui.setRoute("gameover");
@@ -188,23 +188,20 @@ class LevelStore {
 	}
 
 	get displayScores(){
-		let scoreString = "<tr class=\"tc\">" + 
-							"<th class=\"f3 w33\">Tiles</th>" + 
-							"<th class=\"f3 w33\">Tiles/Sec</th>" + 
-							"<th class=\"f3 w33\">Won?</th>" + 
-						"</tr>";
+		let scoreArray = [];
 		for (let i = 0; i < this.scores.tiles.length; i++) {
 			let className = "f4 tc";
 			if (i % 2 === 1) {
 				className = "f4 tc bg-color--4";
 			}
-			scoreString += "<tr class=\"" + className + "\">";
-				scoreString += "<td class=\"w33\">" + this.scores.tiles[i] + "</td>";
-				scoreString += "<td class=\"w33\">" + this.scores.tps[i] + "</td>";
-				scoreString += "<td class=\"w33\">" + this.scores.win[i] + "</td>";
-			scoreString += "</tr>";
+			const score = (<tr class={className}>
+								<td class="w33">{this.scores.tiles[i]}</td>
+								<td class="w33">{this.scores.tps[i]}</td>
+								<td class="w33">{this.scores.time[i]}</td>
+						</tr>);
+			scoreArray.push(score);
 		}
-		return ReactHtmlParser(scoreString);
+		return scoreArray;
 	}
 }
 
