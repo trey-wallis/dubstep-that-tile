@@ -1,67 +1,107 @@
-import { decorate, observable } from "mobx";
-import React from 'react';
-import Timer from '../game/Timer';
-import Level from '../game/Level';
-import Statistics from '../game/Statistics';
-import Scores from '../game/Scores';
-import { WHITE_TILE, 
+import { decorate, observable, computed} from "mobx";
+
+import Storage from '../utility/Storage';
+import TimerStore from '../store/TimerStore';
+import MenuStore from '../store/MenuStore';
+
+import {
+	NUM_TILES_X,
+	NUM_TILES_Y,
+	 WHITE_TILE,
+	 BLACK_TILE,
+	 YELLOW_TILE,
 		 KEY_A,
 		 KEY_S,
 		 KEY_D,
 		 KEY_F,
 		 NUM_DECIMAL_TILE_SEC }
-		from '../GameConstants';
+		from '../constants/GameConstants';
 
 class LevelStore {
 
-	//Takes in the root store so we can access other initialized stores
-	constructor(root){
-		this.root = root;
-		this.gameStarted = false;
-		this.wonGame = false;
-		this.timer = new Timer();
-		this.level = new Level(this);
-		this.statistics = new Statistics();
-		this.scores = new Scores();
+	constructor(){
+		this.started = false;
+		this.won = false;
 		this.traversed = 0;
-		this.selectedTiles = 50;
+		this.modeTiles = NUM_TILES_Y;
+		this.tiles = [];
+		this.tileOffsetY = 0; //How manyy tiles we want to scroll down
+		this.initializeTiles();
 	}
 
-	handleKeyPress(code){
-		if (code === KEY_A || code === KEY_S || code === KEY_D || code === KEY_F){
-			if (!this.gameStarted){
-				this.timer.start();
-				this.gameStarted = true;
-			}
-			if (!this.checkLoseKey(code)){
-				this.level.increaseTileOffset();
-				if (this.level.tileOffset === this.level.gameSize - 4){ //We want to stop on the 4th to last row so we always render 3 white tiles
-					this.win();
+	/*
+	* Initializes the tile array
+	*/
+	initializeTiles(){
+		for (let y = 0; y < (this.modeTiles + 4); y++){
+			//Get a random number between 1 and 4 inclusive
+			const randomNum  = this.random(1,4);
+
+			//If we have played a tile
+			let placedBlack = false;
+
+			//Number of loops in this cycle
+			let iteration = 0;
+
+			for (let x = 0; x < NUM_TILES_X; x++){
+				//Where we are currently at
+				iteration++;
+
+				//Default tile to place
+				let tileId = WHITE_TILE.id;
+
+				//Place a yellow row at the start and then 5 tiles from the end
+				//so that we always have 4 white tiles from the end
+				if (y === 0 || (y === this.modeTiles - 1)){
+					tileId = YELLOW_TILE.id;
+				//Place a black tile in the random location if we haven't already placed a tile,
+				//and the random number equals the current x value, and before the last 4 rows
+			} else if (!placedBlack && iteration === randomNum && y < this.modeTiles - 1){
+					tileId = BLACK_TILE.id;
+					placedBlack = true;
 				}
-			} else {
-				this.lose();
+				//Otherwise place a whtie tile
+				this.tiles[x + y * NUM_TILES_X] = tileId;
 			}
 		}
+	}
+
+	random(min, max){
+		return Math.floor(Math.random() * (max - min + 1)) + min;
+	}
+
+	/*
+	* A computable function that will filter the tiles that we render to the screen
+	*/
+	get screenTiles(){
+		return this.tiles.filter((tile, id) => {
+			const screenStart = this.tileOffsetY * NUM_TILES_X;
+			const screenEnd = ((this.tileOffsetY + 4) * NUM_TILES_X - 1); //-1 because we start at 0
+				if (id >= screenStart && id <= screenEnd)
+					return true;
+				return false;
+		});
 	}
 
 	handleClick(e){
 		if (this.validClick(e.target.id)){
-			if (!this.gameStarted){
-				this.timer.start();
-				this.gameStarted = true;
+			//If we haven't started, then start and turn on the timer
+			if (!this.started){
+				TimerStore.start();
+				this.started = true;
 			}
-			if (!this.checkLoseMouse(e.target.id)){
-				this.level.increaseTileOffset();
-				if (this.level.tileOffset === this.level.gameSize - 4){
-					this.win();
-				}
+			if (!this.mouseCheckWhiteTile(e.target.id)){
+				this.tileOffsetY++;
+				if (this.tileOffsetY === this.modeTiles)
+				this.endGame(true);
 			} else {
-				this.lose();
+				this.endGame(false);
 			}
 		}
 	}
 
-	checkLoseMouse(id){
+	//If it's a white tile - then we lost
+	mouseCheckWhiteTile(id){
 		if (id.startsWith("white")) {
 			return true;
 		}
@@ -78,135 +118,114 @@ class LevelStore {
 		return false;
 	}
 
-	checkLoseKey(code){
-		switch(code){
-			//We have to remember that all these key codes are in reverse order
-			//because the filtered array is reversed
-			case KEY_A:
-				if (this.level.getRenderTile(12) === WHITE_TILE.id){
-					return true;
-				}
-				return false;
-			case KEY_S:
-				if (this.level.getRenderTile(13) === WHITE_TILE.id){
-					return true;
-				}
-				return false;
-			case KEY_D:
-				if (this.level.getRenderTile(14) === WHITE_TILE.id){
-					return true;
-				}
-				return false;
-			case KEY_F:
-				if (this.level.getRenderTile(15) === WHITE_TILE.id){
-					return true;
-				}
-				return false;
-			default:
-				console.log("Key pressed", code);
+	handleKeyPress(code){
+		if (!this.started){
+			TimerStore.start();
+			this.started = true;
+		}
+		if (!this.keyCheckWhiteTile(code)){
+			this.tileOffsetY++;
+			//We want to stop on the 4th to last row so we always render 3 white tiles
+			if (this.tileOffsetY === this.modeTiles)
+				this.endGame(true);
+		} else {
+			this.endGame(false);
 		}
 	}
 
-	get gameTiles(){
-		return this.level.filterTiles;
-	}
-
-	get time(){
-		return `${this.timer.displayElapsed}s`;
-	}
-
-	get lastTime(){
-		return this.timer.displayLastTime;
+	keyCheckWhiteTile(code){
+		 switch(code){
+		 	//We have to remember that all these key codes are in reverse order
+		 	//because the filtered array is reversed
+			case KEY_A:
+				if (this.tiles[this.tileOffsetY] === WHITE_TILE.id)
+					return true;
+				return false;
+			case KEY_S:
+				if (this.tiles[this.tileOffsetY + 1]  === WHITE_TILE.id)
+					return true;
+				return false;
+			case KEY_D:
+				if (this.tiles[this.tileOffsetY + 2]  === WHITE_TILE.id)
+					return true;
+				return false;
+			case KEY_F:
+				if (this.tiles[this.tileOffsetY + 3]  === WHITE_TILE.id)
+					return true;
+				return false;
+			default:
+				return false;
+			}
 	}
 
 	get tilesPerSecond(){
-		return (this.traversed / this.lastTime).toFixed(NUM_DECIMAL_TILE_SEC);
+		return (this.tileOffsetY / TimerStore.elapsed).toFixed(NUM_DECIMAL_TILE_SEC);
 	}
 
-	get totalWhiteTiles(){
-		return this.statistics.white;
+	get whiteTiles(){
+		return Storage.stats.whiteTiles;
 	}
 
-	get totalBlackTiles(){
-		return this.statistics.black;
+	get blackTiles(){
+		return Storage.stats.blackTiles;
 	}
 
 	get totalTiles(){
-		return (this.statistics.black + this.statistics.white);
+		return this.whiteTiles + this.blackTiles;
 	}
 
 	get totalCompletedGames(){
-		return this.statistics.completed;
+		return Storage.stats.gamesCompleted;
 	}
 
 	get totalPlayedGames(){
-		return this.statistics.games;
+		return Storage.stats.gamesPlayed;
 	}
 
-	get averageTilesPerSecond(){
-		return this.statistics.averageTiles;
+	endGame(win){
+		TimerStore.stop();
+		MenuStore.currentMenu = "gameover";
+		if (win)
+			this.win();
+		else
+			this.lose();
+	}
+
+	increaseStats(win, blackTiles){
+		Storage.stats.gamesPlayed++;
+		Storage.stats.blackTiles += blackTiles;
+		if (!win)
+			Storage.stats.whiteTiles++;
+		else
+			Storage.stats.gamesCompleted++;
 	}
 
 	win(){
-		this.traversed = this.level.tileOffset;
-		this.statistics.playedGame();
-		this.statistics.completedGame();
-		this.statistics.increaseBlackTiles(this.traversed);
-		this.scores.playedGame(this.traversed, (this.traversed / this.timer.displayElapsed).toFixed(NUM_DECIMAL_TILE_SEC), this.timer.displayElapsed);
-		this.reset();
-		this.wonGame = true;
-		this.root.ui.setRoute("gameover");
+		this.increaseStats(true, this.tileOffsetY);
+		this.won= true;
 	}
 
 	lose(){
-		this.traversed = this.level.tileOffset;
-		this.statistics.playedGame();
-		this.statistics.increaseWhiteTile();
-		this.statistics.increaseBlackTiles(this.traversed);
-		this.scores.playedGame(this.traversed, (this.traversed / this.timer.displayElapsed).toFixed(NUM_DECIMAL_TILE_SEC), "Lost");
-		this.reset();
-		this.root.ui.setRoute("gameover");
+		this.increaseStats(false, this.tileOffsetY);
+		this.won = false;
 	}
 
 	reset(){
-		this.statistics.saveStatsToStorage();
-		this.scores.saveScoresToStorage();
-		this.timer.stop();
-		this.timer.reset();
-		this.level.reset();
-		this.gameStarted = false;
-		this.wonGame = false;
-	}
-
-	set mode(numTiles){
-		this.selectedTiles = numTiles;
-		this.level = new Level(this, numTiles);
-	}
-
-	get mode(){
-		return this.selectedTiles;
-	}
-
-	get displayScores(){
-		let scoreArray = [];
-		for (let i = 0; i < this.scores.tiles.length; i++) {
-			let className = "f4 tc";
-			if (i % 2 === 1) {
-				className = "f4 tc bg-color--4";
-			}
-			const score = (<tr class={className}>
-								<td class="w33">{this.scores.tiles[i]}</td>
-								<td class="w33">{this.scores.tps[i]}</td>
-								<td class="w33">{this.scores.time[i]}</td>
-						</tr>);
-			scoreArray.push(score);
-		}
-		return scoreArray;
+		Storage.saveStatsToStorage();
+		TimerStore.reset();
+		this.started = false;
+		this.won = false;
+		this.tileOffsetY = 0;
+		this.initializeTiles();
 	}
 }
 
 decorate(LevelStore, {
-	selectedTiles: observable
+	modeTiles: observable,
+	tileOffsetY: observable,
+	screenTiles: computed
 })
 
-export default LevelStore;
+const levelStore = window.levelStore = new LevelStore();
+
+export default levelStore;

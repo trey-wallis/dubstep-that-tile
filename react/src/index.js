@@ -1,37 +1,10 @@
-/*
-* React imports
-*/
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './css/index.css';
+import App from './components/App';
 
-/*
-* Css imports
-*/
-import './index.css';
-import './custom.css';
+import 'tachyons';
 
-/*
-* Component imports
-*/
-import App from './App';
-import AppProvider from './AppProvider';
-
-/*
-* Custom NPM package images
-*/
-import 'tachyons'
-
-import * as serviceWorker from './serviceWorker';
-
-//The AppProvider uses the React context API to make sure that the store props can be
-//access by all components downstream
 ReactDOM.render(
-	<AppProvider>
-		<App />
-	</AppProvider>,
+	<App />,
 	document.getElementById('root'));
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
