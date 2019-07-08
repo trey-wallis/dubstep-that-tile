@@ -6,7 +6,7 @@ import LevelStore from '../store/LevelStore';
 
 const Options = () => {
 	return (
-		<div className="Options">
+		<div className="Options" style={{width: '320px'}}>
 			<div className="Options__title tc f2 b mt5">Options</div>
 			<ul className="f4 list mt3">
 				<li className="Options__select tc">Tiles

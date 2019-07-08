@@ -21,8 +21,8 @@ class Scores extends Component {
 
 	render(){
 		return(
-			<div className="Scores" style={{width: '50%'}}>
-				<div className="Scores__title tc f2 b mt5">Scores</div>
+			<div className="Scores" style={{width: '320px'}}>
+				<div className="Scores__title tc f2 b mt5 pr4">Scores</div>
 				<div style={{overflowY: 'scroll', height: '375px', paddingRight: '20px'}}>
 				<div className='Scores__header'>
 					<div className="Scores__name fl w-third pa2 b f3 tc">Name</div>

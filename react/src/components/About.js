@@ -5,7 +5,7 @@ import BackButton from './BackButton';
 
 const About = () => {
 	return(
-		<div className="About">
+		<div className="About"  style={{width: '320px'}}>
 			<Title/>
 			<div className="About__instructions pa3">
 				<div className="About__instructions-title tc b mb1 f3">Instructions</div>
