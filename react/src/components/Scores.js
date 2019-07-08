@@ -24,10 +24,11 @@ class Scores extends Component {
 			<div className="Scores" style={{width: '50%'}}>
 				<div className="Scores__title tc f2 b mt5">Scores</div>
 				<div style={{overflowY: 'scroll', height: '375px', paddingRight: '20px'}}>
-				<div className='Scores__header mt2 flex justify-between'>
-					<div className="Scores__name f3 b">Name</div>
-					<div className="Score__date f3 b">Date</div>
-					<div className="Score__score f3 b">Score</div>
+				<div className='Scores__header'>
+					<div className="Scores__name fl w-third pa2 b f3 tc">Name</div>
+					<div className="Score__date fl w-third pa2 b f3 tc">Date</div>
+					<div className="Score__score fl w-third pa2 b f3 tc">Score</div>
+					<div className="clear"></div>
 				</div>
 						{ this.renderScores() }
 				</div>

@@ -4,6 +4,10 @@ body {
   background-color: #4B2D73;
 }
 
+.clear {
+  clear: both;
+}
+
 /*
 * Custom Background Colors
 */

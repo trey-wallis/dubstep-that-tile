@@ -8,7 +8,6 @@ class Storage {
 
 		try {
 			this.stats = this.loadStatsFromStorage();
-			console.log(this.stats);
 		} catch(err) {
 			console.log(err);
 		}

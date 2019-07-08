@@ -1,23 +1,6 @@
-import WhiteTile from '../svg/white.svg';
-import BlackTile from '../svg/black.svg';
-import YellowTile from '../svg/yellow.svg';
-
-export const WHITE_TILE = {
-	id: 1,
-	svg: WhiteTile
-};
-
-export const BLACK_TILE = {
-	id: 2,
-	svg: BlackTile
-};
-
-
-export const YELLOW_TILE = {
-	id: 0,
-	svg: YellowTile
-};
-
+export const BLACK_TILE = 0;
+export const WHITE_TILE = 1;
+export const YELLOW_TILE = 2;
 export const NUM_TILES_X = 4;
 export const NUM_TILES_Y = 50;
 export const NUM_TILES = NUM_TILES_X * NUM_TILES_Y;

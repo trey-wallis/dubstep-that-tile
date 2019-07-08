@@ -48,17 +48,17 @@ class LevelStore {
 				iteration++;
 
 				//Default tile to place
-				let tileId = WHITE_TILE.id;
+				let tileId = WHITE_TILE;
 
 				//Place a yellow row at the start and then 5 tiles from the end
 				//so that we always have 4 white tiles from the end
 				if (y === 0 || (y === this.modeTiles - 1)){
-					tileId = YELLOW_TILE.id;
+					tileId = YELLOW_TILE;
 				//Place a black tile in the random location if we haven't already placed a tile,
 				//and the random number equals the current x value, and before the last 4 rows
 			} else if (!placedBlack && iteration === randomNum && y < this.modeTiles - 1){
-					tileId = BLACK_TILE.id;
-					placedBlack = true;
+					tileId = BLACK_TILE;
+					placedBlack = true;;
 				}
 				//Otherwise place a whtie tile
 				this.tiles[x + y * NUM_TILES_X] = tileId;
@@ -84,6 +84,7 @@ class LevelStore {
 	}
 
 	handleClick(e){
+		console.log(e.target);
 		if (this.validClick(e.target.id)){
 			//If we haven't started, then start and turn on the timer
 			if (!this.started){
@@ -93,7 +94,7 @@ class LevelStore {
 			if (!this.mouseCheckWhiteTile(e.target.id)){
 				this.tileOffsetY++;
 				if (this.tileOffsetY === this.modeTiles)
-				this.endGame(true);
+					this.endGame(true);
 			} else {
 				this.endGame(false);
 			}
@@ -112,6 +113,7 @@ class LevelStore {
 	* Make sure we only accept input for the bottom 4 tiles on the screen
 	*/
 	validClick(id){
+		console.log(id);
 		if(id.includes("12") || id.includes("13") || id.includes("14") || id.includes("15")){
 			return true;
 		}
@@ -135,22 +137,20 @@ class LevelStore {
 
 	keyCheckWhiteTile(code){
 		 switch(code){
-		 	//We have to remember that all these key codes are in reverse order
-		 	//because the filtered array is reversed
 			case KEY_A:
-				if (this.tiles[this.tileOffsetY] === WHITE_TILE.id)
+				if (this.tiles[(this.tileOffsetY * 4) + 3] === WHITE_TILE)
 					return true;
 				return false;
 			case KEY_S:
-				if (this.tiles[this.tileOffsetY + 1]  === WHITE_TILE.id)
+				if (this.tiles[(this.tileOffsetY * 4) + 2]  === WHITE_TILE)
 					return true;
 				return false;
 			case KEY_D:
-				if (this.tiles[this.tileOffsetY + 2]  === WHITE_TILE.id)
+				if (this.tiles[(this.tileOffsetY * 4) + 1]  === WHITE_TILE)
 					return true;
 				return false;
 			case KEY_F:
-				if (this.tiles[this.tileOffsetY + 3]  === WHITE_TILE.id)
+				if (this.tiles[this.tileOffsetY * 4]  === WHITE_TILE)
 					return true;
 				return false;
 			default:
