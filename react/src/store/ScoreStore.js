@@ -3,12 +3,19 @@ class ScoreStore {
 
   constructor(){
     this.scores = [];
-    for(let i = 0; i < 10; i++)
-      this.scores.unshift({name: 'hi', date: '07/19/20', score:'29.9'});
+    this.localhost = true;
+    this.server = this.localhost ? "127.0.0.1" : 'address';
   }
 
-  fetchScores(){
+  fetchScores(mode=50){
+    console.log("Fetching scores!", mode);
+    console.log(this.server);
+  }
 
+  pushScore(date, name, time){
+    if (name === '')
+      name = "New User";
+    console.log(date, name, time);
   }
 }
 

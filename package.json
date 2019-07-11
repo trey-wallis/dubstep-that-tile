@@ -1,22 +1,19 @@
 {
   "name": "dubstep-that-tile-api",
   "version": "1.0.0",
-  "description": "File server and database",
+  "description": "The score API",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
     "test": "nodemon server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "http://trey-wallis/dubstep-that-tile-react"
-  },
   "author": "Trey Wallis",
   "license": "ISC",
   "dependencies": {
-    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "nodemon": "^1.18.10",
+    "pg-promise": "^8.5.6",
   }
 }
