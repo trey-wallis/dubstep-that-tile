@@ -3,6 +3,8 @@ import { decorate, observable, computed} from "mobx";
 import Storage from '../utility/Storage';
 import TimerStore from '../store/TimerStore';
 import MenuStore from '../store/MenuStore';
+import formatDate from '../utility/DateFormatter';
+import ScoreStore from '../store/ScoreStore';
 
 import {
 	NUM_TILES_X,
@@ -26,6 +28,7 @@ class LevelStore {
 		this.modeTiles = NUM_TILES_Y;
 		this.tiles = [];
 		this.tileOffsetY = 0; //How manyy tiles we want to scroll down
+		this.username = "";
 		this.initializeTiles();
 	}
 
@@ -202,7 +205,8 @@ class LevelStore {
 
 	win(){
 		this.increaseStats(true, this.tileOffsetY);
-		this.won= true;
+		this.won = true;
+		ScoreStore.pushScore(formatDate(), this.username, TimerStore.elapsed);
 	}
 
 	lose(){

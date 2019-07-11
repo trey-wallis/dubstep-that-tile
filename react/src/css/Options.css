@@ -1,0 +1,14 @@
+.Options__field-username {
+  outline: 0;
+  border: none;
+  color: black;
+  width: 150px;
+}
+
+.Options__field-username:focus {
+  color: black;
+}
+
+.Options__field-username::placeholder {
+  color: black;
+}
