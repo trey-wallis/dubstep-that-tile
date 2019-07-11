@@ -206,7 +206,7 @@ class LevelStore {
 	win(){
 		this.increaseStats(true, this.tileOffsetY);
 		this.won = true;
-		ScoreStore.pushScore(formatDate(), this.username, TimerStore.elapsed);
+		ScoreStore.pushScore(formatDate(), this.username, TimerStore.elapsed, this.modeTiles);
 	}
 
 	lose(){

@@ -27,12 +27,13 @@ app.use((req, res, next) => {
 app.get('/scores', (req, res) => {
 	const mode = req.query.mode;
 
-	db.any('SELECT * FROM scores WHERE mode = $1', mode)
+	db.any('SELECT * FROM scores WHERE mode = $1 ORDER BY time ASC', mode)
 	.then(data => {
 		res.json(data);
 		console.log("Sending scores", data);
 	})
 	.catch(err => {
+		res.status(400).json("Error while processing request");
 		console.log("Error in sending scores", err);
 	});
 });
@@ -45,7 +46,7 @@ app.post('/scores', (req, res) => {
 
 	//If fields are missing data
 	if (date === '' || username === '' || time === '' || mode === ''){
-		return res.status(400).json("Invalid data");
+		return res.status(400).json("Error: one or more fields are missing data");
 	}
 
 	 db.none('INSERT INTO scores(date, username, time, mode) VALUES ($1, $2, $3, $4)', [date, username, time, mode])
@@ -54,6 +55,7 @@ app.post('/scores', (req, res) => {
 		console.log("Inserted new score entry")
 	})
 	.catch(err => {
+		res.status(400).json("Error while processing request");
 		console.log("Error in sending scores", err);
 	});
 });
