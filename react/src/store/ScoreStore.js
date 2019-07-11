@@ -8,7 +8,7 @@ class ScoreStore {
   }
 
   fetchScores(mode=50){
-    console.log("Fetching scores. Mode", mode);
+//    console.log("Fetching scores. Mode", mode);
     fetch(this.serverAddress + '/scores?mode=' + mode)
     .then(response => {
       return response.json();
@@ -22,7 +22,7 @@ class ScoreStore {
   pushScore(date, username, time, mode){
     if (username === '')
       username = "New User";
-    console.log("Pushing score", date, username, time, mode);
+  //  console.log("Pushing score", date, username, time, mode);
     fetch(this.serverAddress + '/scores', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
@@ -32,6 +32,9 @@ class ScoreStore {
         time: time,
         mode: mode
       })
+    })
+    .then(response => {
+      return response.json();
     })
     .then(response => {
       console.log(response);

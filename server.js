@@ -30,7 +30,7 @@ app.get('/scores', (req, res) => {
 	db.any('SELECT * FROM scores WHERE mode = $1 ORDER BY time ASC', mode)
 	.then(data => {
 		res.json(data);
-		console.log("Sending scores", data);
+	//	console.log("Sending scores", data);
 	})
 	.catch(err => {
 		res.status(400).json("Error while processing request");
@@ -52,7 +52,7 @@ app.post('/scores', (req, res) => {
 	 db.none('INSERT INTO scores(date, username, time, mode) VALUES ($1, $2, $3, $4)', [date, username, time, mode])
 	.then(() => {
 		res.json("Success!");
-		console.log("Inserted new score entry")
+	//	console.log("Inserted new score entry")
 	})
 	.catch(err => {
 		res.status(400).json("Error while processing request");
