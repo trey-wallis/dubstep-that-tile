@@ -8,6 +8,7 @@ class Storage {
 
 		try {
 			this.stats = this.loadStatsFromStorage();
+			this.username = this.loadUsernameFromStorage();
 		} catch(err) {
 			console.log(err);
 		}
@@ -39,6 +40,23 @@ class Storage {
 		}
 	}
 
+	loadUsernameFromStorage(){
+		//Check if the HTML5 storage api is available
+		if (typeof(Storage) !== "undefined") {
+			//This is the local storage object. It won't be reset by the browser upon close
+			const storage = window.localStorage;
+
+			//Get the values
+			 if (storage.username){
+			 	return storage.username;
+			 } else {
+				return  "";
+			}
+		} else {
+			throw Error("No HTML5 web storage found on browser");
+		}
+	}
+
 	/*
 	* Saves the stats to a .dat file
 	*/
@@ -54,8 +72,20 @@ class Storage {
 			throw Error("No HTML5 web storage found on browser");
 		}
 	}
-}
 
+	saveUsernameToStorage(user){
+		//Check if the HTML5 storage api is available
+		if (typeof(Storage) !== "undefined") {
+			//This is the local storage object. It won't be reset by the browser upon close
+			const storage = window.localStorage;
+
+			//Create a json object
+			storage.username = user;
+		} else {
+			throw Error("No HTML5 web storage found on browser");
+		}
+	}
+}
 const storage = window.storage = new Storage();
 
 export default storage;
