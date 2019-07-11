@@ -16,11 +16,11 @@ class Scores extends Component {
 	renderScores(){
 			let scoreArray = [];
 			for (let i = 0; i < ScoreStore.scores.length; i++) {
-				const { name, date, time } = ScoreStore.scores[i];
+				const { username, date, time } = ScoreStore.scores[i];
 				let className = "";
 				if (i % 2 === 1)
 					className = "bg-color--4";
-				scoreArray.push(<Score key={i} class={className} name={name} date={date} time={time}/>);
+				scoreArray.push(<Score key={i} class={className} name={username} date={date} time={time}/>);
 			}
 			return scoreArray;
 	}
