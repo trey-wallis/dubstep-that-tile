@@ -28,7 +28,7 @@ class LevelStore {
 		this.modeTiles = NUM_TILES_Y;
 		this.tiles = [];
 		this.tileOffsetY = 0; //How manyy tiles we want to scroll down
-		this.username = "";
+		this.username = Storage.username;
 		this.initializeTiles();
 	}
 
