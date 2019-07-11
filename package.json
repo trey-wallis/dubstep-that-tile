@@ -1,19 +1,15 @@
 {
   "name": "dubstep-that-tile-api",
   "version": "1.0.0",
-  "description": "The score API",
-  "main": "server.js",
-  "scripts": {
-    "start": "nodemon server.js",
-    "test": "nodemon server.js"
-  },
-  "author": "Trey Wallis",
-  "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
     "express": "^4.16.4",
     "nodemon": "^1.18.10",
-    "pg-promise": "^8.5.6",
+    "pg-promise": "^8.5.6"
+  },
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "nodemon server.js"
   }
 }
