@@ -25,7 +25,16 @@ app.use((req, res, next) => {
 * Get requests
 */
 app.get('/scores', (req, res) => {
-	res.json("test");
+	const mode = req.query.mode;
+
+	db.any('SELECT * FROM scores WHERE mode = $1', mode)
+	.then(data => {
+		res.json(data);
+		console.log("Sending scores", data);
+	})
+	.catch(err => {
+		console.log("Error in sending scores", err);
+	});
 });
 
 /*
@@ -39,10 +48,10 @@ app.post('/scores', (req, res) => {
 		return res.status(400).json("Invalid data");
 	}
 
-	db.one('SELECT * FROM scores WHERE tiles = $1', scores)
-	.then(data => {
-		res.json(data);
-		console.log("Sending scores," data);
+	 db.none('INSERT INTO scores(date, username, time, mode) VALUES ($1, $2, $3, $4)', [date, username, time, mode]).
+	.then(() => {
+		res.json("Success!");
+		console.log("Inserted new score entry")
 	})
 	.catch(err => {
 		console.log("Error in sending scores", err);
