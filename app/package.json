@@ -1,8 +1,7 @@
 {
   "name": "dubstep-that-tile",
-  "version": "2.0.0",
+  "version": "0.0.1",
   "private": false,
-  "homepage": "https://www.wallisinnovations.com/dubstep-that-tile",
   "dependencies": {
     "mobx": "^5.11.0",
     "mobx-react": "^5.4.4",
