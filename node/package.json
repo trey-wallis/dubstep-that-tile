@@ -2,9 +2,9 @@
   "name": "dubstep-that-tile-api",
   "version": "0.0.1",
   "dependencies": {
-    "body-parser": "^1.18.3",
+    "body-parser": "^1.20.1",
     "cors": "^2.8.5",
-    "express": "^4.16.4",
+    "express": "^4.18.2",
     "nodemon": "^1.18.10",
     "pg-promise": "^8.5.6"
   },
